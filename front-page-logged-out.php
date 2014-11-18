@@ -17,7 +17,7 @@ if ( have_posts() ) :
                 <?php the_field('113_front_jumbotron_content'); ?>
             </div>
         </div>
-        <div class="image-banner" data-stellar-background-ratio="0.5">
+        <div class="image-banner bg-size" data-stellar-background-ratio="0.5">
             <div class="container">
                 <?php the_field('113_front_image_banner_content'); ?>
             </div>

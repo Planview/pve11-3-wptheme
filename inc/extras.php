@@ -89,4 +89,12 @@ function pve_113_setup_author() {
 add_action( 'wp', 'pve_113_setup_author' );
 
 /**
+ * Polyfills for IE8
  */
+function pve_113_ie_polyfills() { ?>
+<!--[if lte IE 8]>
+    <style>.bg-size{-ms-behavior:url('<?php echo get_template_directory_uri() . '/bower_components/background-size-polyfill/backgroundsize.min.htc' ?>')}</style>
+    <script src="<?php echo get_template_directory_uri() . '/bower_components/respond/dest/respond.min.js' ?>"></script>
+<![endif]-->
+<?php }
+add_action( 'wp_head', 'pve_113_ie_polyfills', 60 );
