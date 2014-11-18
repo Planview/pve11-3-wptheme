@@ -26,6 +26,16 @@ if(function_exists("register_field_group"))
                 'media_buttons' => 1,
                 'dfw' => 1,
             ),
+            array (
+                'key' => 'field_546bc424513d9',
+                'label' => 'Registration Modal Content',
+                'name' => '113_front_reg_modal_content',
+                'type' => 'wp_wysiwyg',
+                'default_value' => '',
+                'teeny' => 0,
+                'media_buttons' => 1,
+                'dfw' => 1,
+            ),
         ),
         'location' => array (
             array (

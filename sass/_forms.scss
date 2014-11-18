@@ -1,0 +1,130 @@
+.login-username, .login-password {
+    @extend .form-group;
+}
+.login-remember {
+    @extend .checkbox;
+}
+#loginform .input {
+    @extend .form-control;
+}
+.login-submit {
+    text-align: center;
+}
+#wp-submit {
+    @extend .btn, .btn-success, .btn-lg;
+}
+
+// Gravity Forms
+.gform_fields {
+  @extend .list-unstyled;
+  #recaptcha_area { margin: 0 auto; }
+}
+// @if $ie8 {
+//   .gfield {
+//     &.gfield_error { @extend .has-error; }
+//     .gfield_label { @extend .control-label; }
+//     @extend .form-group;
+//     margin-bottom: 10px;
+//     #{$single-line-text-inputs}, textarea, select {
+//       @extend .form-control;
+//     }
+//     select[multiple], select[size] {
+//       @extend select[multiple];
+//     }
+//   }
+// }
+// @else {
+  .gfield {
+    &.gfield_error { @extend .has-error; }
+    .gfield_label { @extend .control-label; }
+    @extend .form-group;
+    margin-bottom: 10px;
+  }
+// }
+.ginput_complex {
+  @include make-row();
+  .ginput_left, .ginput_right {
+    @include make-xs-column(12);
+    @include make-md-column(6);
+  }
+  label { font-weight: normal; margin-bottom: 0; }
+  input:focus + label { font-weight: bold; }
+}
+.validation_error {
+  @extend .alert;
+  @extend .alert-danger;
+}
+.validation_message {
+  @extend .label;
+  @extend .label-danger;
+}
+.gfield_required { color: $alert-danger-text; }
+.gfield_checkbox {
+  @extend .list-unstyled;
+  li {
+    label {
+      font-weight: normal;
+    }
+    input[type=checkbox]:checked + label {
+      font-weight: bold;
+    }
+    input[type=checkbox] {
+      margin-right: 5px;
+    }
+  }
+}
+.gform_validation_container {
+  display: none;
+}
+.gform_button {
+    @extend .btn, .btn-info;
+}
+.gform_footer {
+    text-align: center;
+}
+.question-form {
+    label { @extend .sr-only; }
+}
+.question-row {
+    .resources {
+        text-align: center;
+    }
+    @media screen and (min-width: $screen-sm-min) {
+        .resources {
+            padding-bottom: 15px;
+            border-left: 2px #eee solid;
+            text-align: left;
+        }
+    }
+    @media screen and (min-width: $screen-md-min) {
+        .resources {
+            padding-left: 45px;
+        }
+        .question {
+            padding-right: 45px;
+        }
+    }
+}
+.question {
+    .gform_wrapper {
+        @include make-row();
+    }
+    .gform_body {
+        @include make-sm-column(9);
+        @media screen and (min-width: $screen-sm-min) {
+            padding-right: 5px;
+        }
+    }
+    .gform_footer {
+        @include make-sm-column(3);
+        @media screen and (min-width: $screen-sm-min) {
+            padding-left: 5px;
+        }
+    }
+    .gform_button {
+        @media screen and (min-width: $screen-sm-min) {
+            display: block;
+            width: 100%;
+        }
+    }
+}
