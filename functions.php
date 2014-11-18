@@ -147,6 +147,11 @@ require get_template_directory() . '/inc/editor.php';
 require get_template_directory() . '/inc/admin.php';
 
 /**
+ * Custom functions to control login functionalities
+ */
+require get_template_directory() . '/inc/login.php';
+
+/**
  * Custom fields via ACF
  */
 require get_template_directory() . '/inc/custom-fields.php';

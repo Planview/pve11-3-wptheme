@@ -9,7 +9,9 @@ if ( ! class_exists('acf_field_wp_wysiwyg') ) {
     include_once get_template_directory() . '/submodules/acf-wordpress-wysiwyg-field/acf-wp_wysiwyg.php';
 }
 
-
+/**
+ * Shortcut function for the pathnames for custom fields files
+ */
 function pve_113_custom_fields($filename) {
     return get_template_directory() . "/custom-fields/$filename";
 }

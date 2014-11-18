@@ -2,7 +2,6 @@
 /**
  * Functions for making TinyMCE play nice
  */
-
 function pve_113_tinymce_styles() {
     add_editor_style( pve_113_settings('font-url') );
     add_editor_style( 'css/editor.css' );
@@ -10,7 +9,7 @@ function pve_113_tinymce_styles() {
 add_action( 'after_setup_theme', 'pve_113_tinymce_styles' );
 
 /**
- * Make the editor respect empty `<span>` elements
+ * Make the editor play nice, because it wasn't before
  */
 function pve_113_tinymce_settings_filter ( $settings ) {
     static $defaults = array();

@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Writes out a bootstrap modal
+ */
 function pve_113_modal($id, $title, $body, $size = '') { ?>
 <div class="modal fade" id="<?php echo esc_attr( $id ); ?>" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="<?php echo esc_attr( $id ); ?>Label">
   <div class="modal-dialog <?php echo $size; ?>">
@@ -14,9 +17,11 @@ function pve_113_modal($id, $title, $body, $size = '') { ?>
     </div>
   </div>
 </div>
-
 <?php }
 
+/**
+ * Returns the body for the login modal
+ */
 function pve_113_login_modal_body() {
     $login_form = wp_login_form( array(
         'echo'           => false,
