@@ -10,14 +10,12 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'pve_113' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'pve_113' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'pve_113' ), 'Planview Enterprise 11.3', '<a href="https://github.com/crockett95" rel="designer">Steve Crockett</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+	<footer class="site-footer">
+      <div class="container">
+        <p class="text-center pv-footer"><a href="http://planview.com"><span class="pv-logo">Planview</span></a></p>
+        <p class="copyright text-center"><?php printf(__('&copy; %s Planview, Inc., All Rights Reserved.', 'pve_113'), date('Y')); ?></p>
+      </div>
+    </footer>
 
 <?php wp_footer(); ?>
 

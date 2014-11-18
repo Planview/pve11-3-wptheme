@@ -17,6 +17,7 @@
   "dependencies": {
     "bootstrap-sass-official": "~3.3.1",
     "fontawesome": "~4.2.0",
-    "respond": "~1.4.2"
+    "respond": "~1.4.2",
+    "stellar": "~0.6.2"
   }
 }

@@ -1,0 +1,25 @@
+{
+    "name": "planview/pve_113",
+    "description": "A WordPress theme for Planview Enterprise 11.3",
+    "license": "GPL-2",
+    "authors": [
+        {
+            "name": "Steve Crockett",
+            "email": "crockett95@gmail.com"
+        }
+    ],
+    "repositories":[
+        {
+            "type":"composer",
+            "url":"http://wpackagist.org"
+        }
+    ],
+    "extra": {
+        "installer-paths": {
+            "vendor/{$name}/": ["type:wordpress-plugin"]
+        }
+    },
+    "require": {
+        "wpackagist-plugin/advanced-custom-fields": "~4.3.9"
+    }
+}

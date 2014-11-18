@@ -1,0 +1,30 @@
+.site-footer {
+  background-color: #1a3f58;
+  color: #fff;
+  padding: {
+    top: 20px;
+    bottom: 20px;
+  }
+  @media screen and (min-width: $screen-sm-min) {
+    padding: {
+      top: 40px;
+    }
+  }
+}
+.pv-footer {
+  @media screen and (min-width: $screen-sm-min) {
+    margin-bottom: 40px;
+  }
+}
+.pv-logo {
+  @include text-hide();
+  display: inline-block;
+  height: 48px;
+  width: 1163px * 48 / 269;
+  background: {
+    image: url('../img/logo-planview-white.png');
+    size: contain;
+    position: center center;
+    repeat: no-repeat;
+  }
+}

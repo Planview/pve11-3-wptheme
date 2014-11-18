@@ -1,0 +1,85 @@
+.home.not-logged-in .jumbotron {
+  color: #fff;
+  background: {
+    color: $brand-primary;
+  }
+  h1 {
+    font-weight: 300;
+  }
+  margin-bottom: 0;
+  @media screen and (min-width: $screen-sm-min) {
+    padding: {
+      top: 80px;
+      bottom: 80px;
+    }
+    box-shadow: 0 0 200px rgba(0,0,0,0.3) inset;
+    h1 {
+      margin-bottom: 36px;
+    }
+    p {
+      font-size: 36px;
+    }
+  }
+  @media screen and (min-width: $screen-md-min) {
+    padding: {
+      top: 160px;
+      bottom: 160px;
+    }
+  }
+  @media screen and (min-width: $screen-lg-min) {
+    padding: {
+      top: 200px;
+      bottom: 200px;
+    }
+  }
+}
+
+.pve-logo.logo-lg {
+  @include text-hide();
+  display: inline-block;
+  height: 42px;
+  width: 0.625 * 522px;
+  vertical-align: text-top;
+  max-width: 100%;
+  background: {
+    image: url('../img/logo-planview-enterprise-h-white.png');
+    size: contain;
+    repeat: no-repeat;
+    position: center center;
+  }
+  @media screen and (min-width: $screen-sm-min) {
+    height: 72px;
+    width: 522px;
+    margin: {
+      top: 5px;
+    }
+  }
+}
+
+.home.not-logged-in .btn {
+  border-color: #fff;
+  border-width: 3px;
+  font-weight: 800;
+}
+
+.home.not-logged-in .image-banner {
+  background-color: $gray-dark;
+  padding: {
+    top: 20px;
+    bottom: 20px;
+  }
+  color: #fff;
+  @media screen and (min-width: $screen-sm-min) {
+    background: {
+      image: url('../img/video-section-bg.jpg');
+      size: cover;
+      attachment: fixed;
+      position: 50% 0;
+      repeat: no-repeat;
+    }
+    padding: {
+      top: 100px;
+      bottom: 100px;
+    }
+  }
+}

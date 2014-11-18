@@ -1,0 +1,3 @@
+[submodule "submodules/acf-wordpress-wysiwyg-field"]
+	path = submodules/acf-wordpress-wysiwyg-field
+	url = https://github.com/elliotcondon/acf-wordpress-wysiwyg-field.git

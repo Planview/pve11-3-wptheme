@@ -13,13 +13,23 @@ add_action( 'after_setup_theme', 'pve_113_tinymce_styles' );
  * Make the editor respect empty `<span>` elements
  */
 function pve_113_tinymce_settings_filter ( $settings ) {
-    $opts = 'span[*],i[*],.fa';
-    if ( ! isset( $settings['valid_elements'] ) ) {
-        $settings['valid_elements'] = $opts;
-    } else {
-        $settings['valid_elements'] .= ',' . $opts;
+    static $defaults = array();
+
+    if ( empty($defaults) && $settings['selector'] === '#content' ) {
+        $defaults = $settings;
+        $opts = '*,*[*]';
+        if ( ! isset( $defaults['valid_elements'] ) ) {
+            $defaults['valid_elements'] = $opts;
+        } else {
+            $defaults['valid_elements'] .= ',' . $opts;
+        }
     }
-    error_log( print_r($settings, true) );
+
+    $selector = $settings['selector'];
+
+    $settings = $defaults;
+    $settings['selector'] = $selector;
+
     return $settings;
 }
 add_filter( 'tiny_mce_before_init', 'pve_113_tinymce_settings_filter' );
