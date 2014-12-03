@@ -24,10 +24,12 @@ function pve_113_tinymce_settings_filter ( $settings ) {
         }
     }
 
-    $selector = $settings['selector'];
+    if ( ! empty($defaults) ) {
+        $selector = $settings['selector'];
 
-    $settings = $defaults;
-    $settings['selector'] = $selector;
+        $settings = $defaults;
+        $settings['selector'] = $selector;
+    }
 
     return $settings;
 }
