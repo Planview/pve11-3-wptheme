@@ -1,8 +1,8 @@
-.home.not-logged-in .jumbotron {
-  color: #fff;
-  background: {
-    color: $brand-primary;
-  }
+body.home.not-logged-in {
+    padding-top: 0;
+}
+
+.home .jumbotron {
   h1 {
     font-weight: 300;
   }
@@ -19,6 +19,13 @@
     p {
       font-size: 36px;
     }
+  }
+}
+
+.home.not-logged-in .jumbotron {
+  color: #fff;
+  background: {
+    color: $brand-primary;
   }
   @media screen and (min-width: $screen-md-min) {
     padding: {
@@ -62,24 +69,79 @@
   font-weight: 800;
 }
 
-.home.not-logged-in .image-banner {
-  background-color: $gray-dark;
+.home .image-banner {
   padding: {
     top: 20px;
     bottom: 20px;
   }
-  color: #fff;
   @media screen and (min-width: $screen-sm-min) {
     background: {
-      image: url('../img/video-section-bg.jpg');
       size: cover;
       attachment: fixed;
       position: 50% 0;
       repeat: no-repeat;
+    }
+  }
+}
+
+.home.not-logged-in .image-banner {
+  background-color: $gray-dark;
+  color: #fff;
+  @media screen and (min-width: $screen-sm-min) {
+    background: {
+      image: url('../img/video-section-bg.jpg');
     }
     padding: {
       top: 100px;
       bottom: 100px;
     }
   }
+}
+
+.home.logged-in .image-banner {
+  @media screen and (min-width: $screen-sm-min) {
+    background: {
+      image: url('../img/light-bg-compressor.jpg');
+    }
+    padding: {
+      top: 40px;
+      bottom: 40px;
+    }
+  }
+}
+
+.home-callout {
+    padding: 30px 20px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    a {
+        color: #fff;
+        &:hover, &:active {
+            color: #eee;
+        }
+    }
+    &.main {
+        background-color: #f98810;
+    }
+    &.topics {
+        background-color: #67873a;
+    }
+    &.resources {
+        background-color: #9a5b7d;
+    }
+}
+
+.home-note-after {
+    text-align: center;
+    padding: 10px;
+    background-color: $gray-dark;
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    a {
+        color: #c4d0da;
+        &:hover, &:active {
+            color: #e3eaf0;
+        }
+    }
 }

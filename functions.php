@@ -160,3 +160,8 @@ require get_template_directory() . '/inc/custom-fields.php';
  * Making modals easier
  */
 require get_template_directory() . '/inc/modals.php';
+
+/**
+ * Navigational walking
+ */
+require get_template_directory() . '/inc/nav-walkers.php';

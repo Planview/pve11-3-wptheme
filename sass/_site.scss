@@ -28,3 +28,42 @@
     repeat: no-repeat;
   }
 }
+
+.admin-bar .navbar-fixed-top {
+    @media screen and (min-width: 783px) {
+        top: 32px;
+    }
+}
+
+// body {
+//     padding-top: $navbar-height;
+// }
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-brand {
+    @include text-hide();
+    background:{
+        image: url('../img/planview-enterprise-11-3-logo.png');
+        position: center center;
+        size: contain;
+        repeat: no-repeat;
+    }
+    width: 200px;
+    margin-left: 10px;
+    @media screen and (min-width: 350px) {
+        width: 250px;
+    }
+    @media screen and (min-width: $screen-sm-min) {
+        width: 300px;
+        margin-left: 0 !important;
+    }
+    @media screen and (min-width: $screen-md-min) {
+        width: 400px;
+    }
+    @media screen and (min-width: $screen-lg-min) {
+        width: 450px;
+    }
+}

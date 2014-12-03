@@ -23,3 +23,41 @@ function pve_113_logged_out_class($classes) {
     return $classes;
 }
 add_filter( 'body_class', 'pve_113_logged_out_class' );
+
+
+
+/**
+ * Enqueue some styles to make things prettier
+ */
+function pve_113_login_styles() {
+    wp_enqueue_style( 'avenir', pve_113_settings('font-url') );
+    wp_enqueue_style( 'pve_113-style', get_template_directory_uri() . '/css/login.css', array('avenir') );
+}
+add_action( 'login_init', 'pve_113_login_styles' );
+
+function pve_113_login_init() {
+    add_filter('style_loader_tag', 'pve_113_style_loader_tag', 1, 2);
+    add_action('login_head', 'pve_113_force_login_styles');
+}
+add_action( 'login_init', 'pve_113_login_init' );
+
+function pve_113_style_loader_tag($tag, $handle) {
+    if ( in_array( $handle, array( 'login', 'buttons', 'open-sans', 'dashicons' ) ) ) {
+        return '';
+    }
+    return $tag;
+}
+
+function pve_113_force_login_styles() {
+    wp_print_styles('pve_113-style');
+}
+
+function pve_113_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'pve_113_login_logo_url' );
+
+function pve_113_login_logo_url_title() {
+    return get_bloginfo( 'name' );;
+}
+add_filter( 'login_headertitle', 'pve_113_login_logo_url_title' );
