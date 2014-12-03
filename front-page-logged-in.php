@@ -8,7 +8,7 @@
  * @package Planview Enterprise 11.3
  */
 
-get_header('head');
+get_header();
 
 if ( have_posts() ) :
     while ( have_posts() ) : the_post(); ?>
