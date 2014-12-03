@@ -165,3 +165,8 @@ require get_template_directory() . '/inc/modals.php';
  * Navigational walking
  */
 require get_template_directory() . '/inc/nav-walkers.php';
+
+/**
+ * Resource Library functions
+ */
+require get_template_directory() . '/inc/library.php';

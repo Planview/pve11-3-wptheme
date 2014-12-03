@@ -77,13 +77,19 @@ function pve_113_library_sort() {
 
             if ( ! isset( $sorted_list[$release->name] ) ) {
                 $sorted_list[$release->name] = array();
+                $sorted_list[$release->name]['__object'] = $release;
             }
 
             if ( ! isset( $sorted_list[$release->name][$type->name] ) ) {
                 $sorted_list[$release->name][$type->name] = array();
+                $sorted_list[$release->name][$type->name]['__object'] = $type;
             }
 
-            $sorted_list[$release->name][$type->name][] = $GLOBALS['post'];
+            if ( get_field( 'pv_event_resource_featured') && ! isset( $sorted_list[$release->name]['__featured'] ) ) {
+                $sorted_list[$release->name]['__featured'] = $GLOBALS['post'];
+            } else {
+                $sorted_list[$release->name][$type->name][] = $GLOBALS['post'];
+            }
         }
     }
 
