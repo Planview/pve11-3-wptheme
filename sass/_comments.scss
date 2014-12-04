@@ -1,0 +1,139 @@
+#comments {
+    @media screen and (min-width: $screen-sm-min) {
+        padding: {
+            left: 30px;
+            right: 30px;
+        }
+        border-right: 1px solid #fff;
+    }
+}
+#respond {
+    margin-bottom: 40px;
+    .comment-meta {
+        display: none;
+    }
+}
+#response-cont > .comment-title {
+    display: none;
+}
+.comment-title {
+    @extend .h3;
+}
+#commentlist, .children {
+    list-style: none;
+    padding-left: 0;
+}
+// #commentlist {
+//     margin-left: 0;
+// }
+.children {
+    padding-left: 30px;
+    margin-top: 10px;
+}
+#commentlist > .comment {
+    margin: {
+        top: 15px;
+        bottom: 15px;
+    }
+}
+.comment > .comment-body {
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    @include clearfix();
+    // display: table-row;
+    width: 100%;
+}
+    // .comment-body {
+    //     @extend .media;
+    //     // padding: 10px;
+    // }
+    // .comment .comment-body {
+    //     border: 1px solid #ddd;
+    //     margin: {
+    //         top: 15px;
+    //         bottom: 15px;
+    //     }
+    // }
+.comment-author-avatar {
+    display: table-cell;
+    vertical-align: top;
+    padding-right: 10px;
+    img {
+        border-radius: $border-radius-large;
+    }
+}
+.comment-content {
+    // float: left;
+    padding-left: 10px;
+    border-left: 1px solid $gray-lighter;
+    margin-left: 10px;
+    display: table-cell;
+    vertical-align: top;
+}
+.comment-meta {
+    border-bottom: 1px solid $gray-lighter;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    display: block;
+    #comment-form & {
+        border-bottom-color: #fff;
+    }
+}
+.fn {
+    @extend .h4;
+    font-style: normal;
+    margin-right: 10px;
+}
+.date {
+    @extend .small;
+}
+a[href$="profile.php"], a[href*="wp-login.php"] {
+    display: none;
+}
+.comment-buttons {
+    margin-bottom: 10px;
+    font-size: 0;
+    a {
+        font-size: $font-size-base * 0.75;
+        @extend .label;
+        margin-right: 5px;
+    }
+}
+.comment-button {
+    @extend .label-primary;
+}
+.comment-link {
+    @extend .label-info;
+}
+.comment-reply-link {
+    @extend .label-success;
+}
+.comment-edit-link {
+    @extend .label-danger;
+}
+.toggle {
+    @extend .label, .label-success;
+    display: block;
+    margin: {
+        top: 10px;
+        bottom: 10px;
+    }
+}
+.textarea-border {
+    @extend .form-group;
+}
+#comment {
+    @extend .form-control;
+    height: auto;
+}
+#comments .submit {
+    @include make-btn();
+    @extend .btn-success;
+    margin-right: 10px;
+}
+#cancel-comment-reply-link {
+    @include make-btn();
+    @extend .btn-danger;
+}

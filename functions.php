@@ -115,7 +115,7 @@ function pve_113_scripts() {
             '/bower_components/stellar/jquery.stellar.min.js', array( 'jquery' ),
             '0.6.2', true );
     wp_enqueue_script( 'pve_113-scripts', get_stylesheet_directory_uri() .
-            '/js/main.js', array( 'stellar', 'jquery' ) );
+            '/js/main.js', array( 'stellar', 'jquery', 'underscore' ) );
     wp_enqueue_script( 'bootstrap', get_stylesheet_directory_uri() .
         '/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js',
         array('jquery'), '3.3.0' );

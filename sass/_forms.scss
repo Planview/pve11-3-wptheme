@@ -1,23 +1,6 @@
-.login-username, .login-password {
-    @extend .form-group;
-}
-.login-remember {
-    @extend .checkbox;
-}
-#loginform .input {
-    @extend .form-control;
-}
-.login-submit {
-    text-align: center;
-}
-#wp-submit {
-    @extend .btn, .btn-success, .btn-lg;
-}
-
 // Gravity Forms
 .gform_fields {
-  @extend .list-unstyled;
-  #recaptcha_area { margin: 0 auto; }
+  @include list-unstyled();
 }
 // @if $ie8 {
 //   .gfield {
@@ -60,7 +43,7 @@
 }
 .gfield_required { color: $alert-danger-text; }
 .gfield_checkbox {
-  @extend .list-unstyled;
+  @include list-unstyled();
   li {
     label {
       font-weight: normal;
@@ -77,7 +60,8 @@
   display: none;
 }
 .gform_button {
-    @extend .btn, .btn-info;
+    @include make-btn();
+    @extend .btn-info;
 }
 .gform_footer {
     text-align: center;

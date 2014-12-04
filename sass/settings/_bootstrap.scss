@@ -110,7 +110,7 @@ $padding-xs-horizontal:     5px !default;
 $line-height-large:         1.33 !default;
 $line-height-small:         1.5 !default;
 
-$border-radius-base:        4px !default;
+$border-radius-base:        2px;
 $border-radius-large:       6px !default;
 $border-radius-small:       3px !default;
 
@@ -195,7 +195,7 @@ $input-border:                   #ccc !default;
 
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
-$input-border-radius:            2px;
+$input-border-radius:            $border-radius-base;
 //** Large `.form-control` border radius
 $input-border-radius-large:      4px;
 //** Small `.form-control` border radius
@@ -436,9 +436,9 @@ $nav-tabs-justified-link-border-color:            #ddd !default;
 $nav-tabs-justified-active-link-border-color:     $body-bg !default;
 
 //== Pills
-$nav-pills-border-radius:                   $border-radius-base !default;
-$nav-pills-active-link-hover-bg:            $component-active-bg !default;
-$nav-pills-active-link-hover-color:         $component-active-color !default;
+$nav-pills-border-radius:                   0;
+$nav-pills-active-link-hover-bg:            #1a3f58;
+$nav-pills-active-link-hover-color:         #fff;
 
 
 //== Pagination
@@ -741,7 +741,7 @@ $panel-danger-heading-bg:     $state-danger-bg !default;
 //** Padding around the thumbnail image
 $thumbnail-padding:           4px !default;
 //** Thumbnail background color
-$thumbnail-bg:                $body-bg !default;
+$thumbnail-bg:                #fff;
 //** Thumbnail border color
 $thumbnail-border:            #ddd !default;
 //** Thumbnail border radius
@@ -853,9 +853,9 @@ $headings-small-color:        $gray-lighter;
 //** Blockquote small color
 $blockquote-small-color:      $gray-light !default;
 //** Blockquote font size
-$blockquote-font-size:        ($font-size-base * 1.25) !default;
+$blockquote-font-size:        ($font-size-base * 1.0);
 //** Blockquote border color
-$blockquote-border-color:     $gray-lighter !default;
+$blockquote-border-color:     $brand-primary;
 //** Page header border color
 $page-header-border-color:    $gray-lighter !default;
 //** Width of horizontal description list titles

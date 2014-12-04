@@ -103,3 +103,18 @@ function pve_113_library_sort() {
 
     return $sorted_list;
 }
+
+/**
+ * Return `target="_blank"` if it should open in a new window
+ */
+function pve_113_resource_target($type) {
+    switch ($type) {
+        case 'pdf':
+        case 'slideshare':
+        case 'link':
+            return ' target="_blank"';
+        case 'video':
+        default:
+            return '';
+    }
+}

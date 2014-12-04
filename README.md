@@ -8,11 +8,11 @@ Theme for the Planview Enterprise 11.3 Launch Event site.
 - [] Style Main Presentation
 - [] Style Topic Areas
 - [] Style Topic Area Archive
-- [] Style Resource Library
+- [X] Style Resource Library
 - [] Style Spectacu.la
 - [] Template for Angular Gravity forms
 - [] Template for Main Presentation
 - [] Template for Topic Areas
 - [] Template for Topic Area Archive
-- [] Template for Resource Library
+- [X] Template for Resource Library
 - [] Something else

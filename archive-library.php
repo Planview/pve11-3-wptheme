@@ -47,7 +47,8 @@ get_header(); ?>
                                         <div class="col-sm-8"><img src="http://placehold.it/800x450" alt="" class="img-responsive"></div>
                                         <div class="col-sm-4">
                                             <h2><span class="small">Featured:</span><br /> <?php the_title(); ?></h2>
-                                            <?php the_excerpt(); ?>
+                                            <p class="hidden-sm hidden-xs"><?php echo get_the_excerpt(); ?></p>
+                                            <p><a href="<?php the_permalink(); ?>" class="btn btn-default">View it Now!</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -62,12 +63,16 @@ get_header(); ?>
                                             <?php foreach ($type_posts as $index => $post) :
                                                 if ('__object' === $index) continue;
                                                 setup_postdata( $post ); ?>
-                                                <div class="col-sm-4 resource pane">
+                                                <div class="col-sm-4 col-md-3 resource-pane">
                                                     <div class="panel">
                                                         <div class="panel-body">
-                                                        <img src="http://placehold.it/800x450" alt="" class="img-responsive center-block">
-                                                        <h4><?php the_title(); ?></h4>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque optio cumque omnis perferendis ut possimus vero, sapiente explicabo nesciunt dolorum reiciendis at, quibusdam delectus, ea, quo dolorem aut ipsum ex.</p>
+                                                        <a href="<?php the_permalink(); ?>"<?php echo pve_113_resource_target( get_field( 'pv_event_resource_doc_type' ) ) ?>>
+                                                            <img src="http://placehold.it/800x450" alt="" class="img-responsive center-block hidden-xs">
+                                                        </a>
+                                                        <h4><a href="<?php the_permalink(); ?>"<?php echo pve_113_resource_target( get_field( 'pv_event_resource_doc_type' ) ) ?>>
+                                                            <span class="fa <?php echo pve_113_icon_class( get_field( 'pv_event_resource_doc_type' ) ) ?>"></span>
+                                                            <?php the_title(); ?>
+                                                        </a></h4>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -10,9 +10,14 @@
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap";
 @import "fontawesome/scss/font-awesome";
 
+// My utilities
+@import "mixins";
+
 // My Style
 @import "base";
 @import "site";
 @import "home";
 @import "forms";
+@import "presentations";
 @import "resources";
+@import "comments";
