@@ -7,6 +7,20 @@ jQuery(document).ready(function ($) {
     });
   }
 
+  var headroomOptions = {
+    offset: 100,
+    tolerance: 5
+  };
+
+  $('#header').headroom(headroomOptions);
+
+  $('#survey').headroom(headroomOptions);
+  $('#survey').on('mouseover', function () {
+    $(this).find('.survey-text').animate({'width': 140}, 400);
+  }).on('mouseleave', function () {
+    $(this).find('.survey-text').animate({'width': 0}, 400);
+  });
+
   $(window).on('resize', _.throttle(function (e) {
     $('.limelight-video-respond').each(function () {
       var $wrapper = $(this),

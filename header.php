@@ -11,7 +11,7 @@ get_header('head'); ?>
 <div id="page" class="hfeed site">
     <a class="skip-link sr-only" href="#content"><?php _e( 'Skip to content', 'pve_113' ); ?></a>
 
-    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <nav id="header" class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <header class="navbar-header">
@@ -38,16 +38,9 @@ get_header('head'); ?>
         </div>
     </nav>
 
-    <!-- <header id="masthead" class="site-header" role="banner">
-        <div class="site-branding">
-            <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-            <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-        </div> --><!-- .site-branding -->
-
-        <!-- <nav id="site-navigation" class="main-navigation" role="navigation">
-            <button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Primary Menu', 'pve_113' ); ?></button>
-            <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-        </nav> --><!-- #site-navigation -->
-    <!-- </header> --><!-- #masthead -->
+    <a href="" id="survey">
+        <span class="survey-text">Take the Survey</span>
+        <span class="fa fa-bullhorn"></span>
+    </a>
 
     <!-- <div id="content" class="site-content"> -->

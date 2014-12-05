@@ -1,3 +1,21 @@
+.login-username, .login-password {
+    @extend .form-group;
+}
+.login-remember {
+    @extend .checkbox;
+}
+#loginform .input {
+    @extend .form-control;
+}
+.login-submit {
+    text-align: center;
+}
+#wp-submit {
+    @extend .btn, .btn-success, .btn-lg;
+}
+
+
+
 // Gravity Forms
 .gform_fields {
   @include list-unstyled();
