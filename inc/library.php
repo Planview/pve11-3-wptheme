@@ -118,3 +118,39 @@ function pve_113_resource_target($type) {
             return '';
     }
 }
+
+function pve_113_resource_list( $resources, $echo = true ) {
+    global $post;
+    if ( empty($resources) ) return false;
+
+    $list = '<ul class="fa-ul">';
+
+    foreach ( $resources as $post ) {
+        setup_postdata( $post );
+
+        $type = get_field('pv_event_resource_doc_type');
+
+        $list .= sprintf(
+            '<li>' .
+                '<a href="%s" title="%s"%s>' .
+                    '<span class="fa fa-li %s"></span> %s' .
+                '</a>' .
+            '</li>',
+            get_permalink(),
+            esc_attr( get_the_title() ),
+            pve_113_resource_target( $type ),
+            pve_113_icon_class( $type ),
+            get_the_title()
+        );
+    }
+
+    $list .= '</ul>';
+
+    if ($echo) {
+        echo $list;
+        return true;
+    } else {
+        return $list;
+    }
+    wp_reset_postdata();
+}

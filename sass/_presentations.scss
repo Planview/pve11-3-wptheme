@@ -1,17 +1,72 @@
-.single-presentations {
+
+.comment-title, .section-title {
+    border-bottom: 3px solid $gray;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.single-presentations, .single-topics {
     .content-area, .video {
         padding: {
             top: 40px;
             bottom: 40px;
         }
     }
+    .comment-title, .section-title {
+        border-bottom: 3px solid $gray;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
     .limelight-video-respond {
         margin-bottom: 0;
     }
+    // .qa-form {
+    //     margin-top: 15px;
+    // }
+    // .qa-confirm {
+    //     color: #fff;
+    // }
+    #comments, .experts {
+        @media screen and (min-width: $screen-sm-min) {
+            padding: {
+                left: 30px;
+                right: 30px;
+            }
+            border-right: 1px solid #fff;
+        }
+    }
+}
+
+.single-presentations {
     .video {
         background-color: #345770;
     }
     .qa-form {
         margin-top: 15px;
+    }
+    .qa-confirm {
+        color: #fff;
+    }
+    .comment-title, .section-title {
+        border-bottom-color: #345770;
+        color: #345770;
+    }
+}
+
+.single-topics {
+    .video {
+        background-color: #67873a;
+    }
+    // .qa-form {
+    //     margin-top: 15px;
+    // }
+    // .qa-confirm {
+    //     color: #fff;
+    // }
+    .comment-title, .section-title {
+        border-bottom-color: #67873a;
+        color: #67873a;
     }
 }

@@ -51,8 +51,10 @@ body {
             top: 0;
         }
         .admin-bar & {
-            &.headroom--pinned, &.headroom--top {
+            &.headroom--top {
                 top: 46px;
+            }
+            &.headroom--pinned, &.headroom--top {
                 @media screen and (min-width: $screen-sm-min) {
                     top: 32px;
                 }

@@ -98,3 +98,89 @@ function pve_113_ie_polyfills() { ?>
 <![endif]-->
 <?php }
 add_action( 'wp_head', 'pve_113_ie_polyfills', 60 );
+
+/**
+ * FontAwesome shortcode
+ */
+function pve_113_fa_shortcode( $atts ) {
+    $atts = shortcode_atts( array(
+        'class' => 'fa-circle'
+    ), $atts );
+
+    return sprintf('<span class="fa %s"></span>', $atts['class']);
+}
+add_shortcode( 'fa','pve_113_fa_shortcode' );
+
+/**
+ * Do shortcodes in nav menu titles
+ */
+function pve_113_nav_shortcodes( $title ) {
+    return do_shortcode( $title );
+}
+
+/**
+ * Vis classes on text in navbar
+ */
+function pve_113_bootstrap_visibility( $atts, $content ) {
+    $atts = shortcode_atts( array(
+        'show' => '',
+        'hide' => ''
+    ), $atts );
+
+    $classes = array();
+
+    foreach (explode(',', $atts['show']) as $size) {
+        $size = trim($size);
+        $classes[] = "visible-$size";
+    }
+
+    foreach (explode(',', $atts['hide']) as $size) {
+        $size = trim($size);
+        $classes[] = "hidden-$size";
+    }
+
+    return sprintf('<span class="%s">%s</span>', implode(' ', $classes), $content);
+}
+add_shortcode( 'bs-vis','pve_113_bootstrap_visibility' );
+
+/**
+ * Add the shortcodes filter at the beginning of the nav menu
+ */
+function pve_113_pre_wp_nav_menu( $val ) {
+    add_filter( 'the_title', 'pve_113_nav_shortcodes', 1 );
+    return $val;
+}
+add_filter( 'pre_wp_nav_menu', 'pve_113_pre_wp_nav_menu' );
+
+/**
+ * Remove the shortcodes filter after the menu
+ */
+function pve_113_wp_nav_menu( $val ) {
+    remove_filter( 'the_title', 'pve_113_nav_shortcodes' );
+    return $val;
+}
+add_filter( 'wp_nav_menu', 'pve_113_wp_nav_menu' );
+
+function pve_113_make_img( $data, $classes = array(), $size = null, $title = null ) {
+    if ( null !== $size ) {
+        $src = $data['sizes'][ $size ];
+        $height = $data['sizes'][ "$size-height" ];
+        $width = $data['sizes'][ "$size-width" ];
+    } else {
+        $src = $data['url'];
+        $height = $data['height'];
+        $width = $data['width'];
+    }
+
+    $classes[] = "wp-img-{$data['id']}";
+
+    return sprintf(
+        '<img src="%s" height="%s" width="%s" alt="%s" title="%s" class="%s" >',
+        $src,
+        $height,
+        $width,
+        esc_attr( $data['alt'] ),
+        esc_attr( $title ) ?: esc_attr( $data['description'] ),
+        esc_attr( implode(' ', $classes) )
+    );
+}

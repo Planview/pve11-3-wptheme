@@ -20,7 +20,9 @@ get_header(); ?>
                         <div class="thumbnail limelight-video-respond">
                             <?php echo preg_replace('/<param[^>]*name="wmode"[^>]*>/', '<param name="wmode" value="transparent"/>', get_field( 'pv_event_presentation_video' ) ); ?>
                         </div>
-                        <div class="qa-form"><?php echo do_shortcode( get_field('pv_event_presentation_qa_form') ); ?></div>
+                        <div class="qa-form">
+                        <?php echo do_shortcode( get_field('pv_event_presentation_qa_form') ); ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -37,18 +39,11 @@ get_header(); ?>
                 </div>
                 <div class="col-sm-3">
                     <aside class="resource-list">
-                        <h3>Resources</h3>
-                            <ul class="fa-ul">
-                                <li><span class="fa fa-li fa-file-o"></span> Lorem ipsum dolor sit.</li>
-                                <li><span class="fa fa-li fa-file-o"></span> Lorem ipsum dolor sit.</li>
-                                <li><span class="fa fa-li fa-file-o"></span> Lorem ipsum dolor sit.</li>
-                                <li><span class="fa fa-li fa-file-o"></span> Lorem ipsum dolor sit.</li>
-                            </ul>
+                        <h3 class="section-title">Resources</h3>
+                        <?php pve_113_resource_list( get_field( 'pv_event_presentation_resources' ) ); ?>
                     </aside>
                 </div>
             </div>
-            <main id="main" class="site-main" role="main">
-            </main><!-- #main -->
         </div><!-- #primary -->
 
     <?php endwhile; ?>
