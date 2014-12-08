@@ -12,7 +12,7 @@
  * @subpackage Angular_Gravity_Forms/public/partials
  */
 ?>
-<div class="ng-gravityforms" ng-app="ngGravityForms">
+<div class="ng-gravityforms" id="ng-app" ng-app="ngGravityForms">
 <div ng-controller="FormsCtrl">
 <form ng-submit="submitForm()" ng-hide="showConfirm">
 <?php if ( $this->get_config( 'title' ) ) : ?>
