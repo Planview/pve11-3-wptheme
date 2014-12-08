@@ -9,8 +9,8 @@ get_header(); ?>
             <div class="container">
                 <h1>
                     <?php the_title(); ?>
-                    <?php the_field( 'pv_event_presentation_abstract' ); ?>
                 </h1>
+                <?php the_field( 'pv_event_presentation_abstract' ); ?>
             </div>
         </div>
         <div class="video">

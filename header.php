@@ -21,7 +21,7 @@ get_header('head'); ?>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+                <a class="navbar-brand bg-size" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
             </header>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -39,7 +39,7 @@ get_header('head'); ?>
     </nav>
 
     <a href="" id="survey">
-        <span class="survey-text">Take the Survey</span>
+        <span class="survey-text"><?php _e( 'Take the Survey', 'pve_113' ); ?></span>
         <span class="fa fa-bullhorn"></span>
     </a>
 

@@ -81,8 +81,10 @@
 .date {
     @extend .small;
 }
-a[href$="profile.php"], a[href*="wp-login.php"] {
-    display: none;
+#comments {
+    a[href$="profile.php"], a[href*="wp-login.php"] {
+        display: none;
+    }
 }
 .comment-buttons {
     margin-bottom: 10px;
