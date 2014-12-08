@@ -50,7 +50,7 @@ get_header(); ?>
                                                     <ul class="fa-ul">
                                                         <?php if ( get_sub_field('twitter') ) : ?>
                                                             <li>
-                                                                <a href="https://twitter.com/<?php the_sub_field('twitter') ?>">
+                                                                <a href="https://twitter.com/<?php the_sub_field('twitter') ?>" target="_blank">
                                                                     <span class="fa fa-twitter-square fa-li"></span>
                                                                     @<?php the_sub_field('twitter') ?>
                                                                 </a>
@@ -60,7 +60,7 @@ get_header(); ?>
                                                             <li>
                                                                 <a href="mailto:<?php the_sub_field('email') ?>">
                                                                     <span class="fa fa-envelope-square fa-li"></span>
-                                                                    @<?php the_sub_field('email') ?>
+                                                                    <?php the_sub_field('email') ?>
                                                                 </a>
                                                             </li>
                                                         <?php endif; ?>
