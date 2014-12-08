@@ -17,3 +17,4 @@ function pve_113_custom_fields($filename) {
 }
 
 include_once pve_113_custom_fields('front-page.php');
+include_once pve_113_custom_fields('pages.php');

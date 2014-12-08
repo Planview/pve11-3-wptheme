@@ -61,3 +61,16 @@ function pve_113_login_logo_url_title() {
     return get_bloginfo( 'name' );;
 }
 add_filter( 'login_headertitle', 'pve_113_login_logo_url_title' );
+
+function pve_113_login_access() {
+    if ( is_user_logged_in() ) return;
+
+    $post_types = array( 'library', 'topics', 'presentations' );
+    if ( is_singular( $post_types ) || is_post_type_archive( $post_types ) ||
+            ( is_page() && get_field( 'pve_113_page_logged_in_only', $GLOBALS['post']->ID ) ) ) {
+        wp_redirect( home_url( '/' ), 302 );
+        exit;
+    }
+}
+add_action( 'wp', 'pve_113_login_access' );
+
