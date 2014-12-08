@@ -44,11 +44,15 @@ get_header(); ?>
                             <div class="featured-resource">
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-sm-8"><img src="http://placehold.it/800x450" alt="" class="img-responsive"></div>
+                                        <div class="col-sm-8">
+                                            <a href="<?php the_permalink(); ?>"<?php echo pve_113_resource_target( get_field( 'pv_event_resource_doc_type' ) ) ?>>
+                                                <?php the_post_thumbnail( 'library-featured', array( 'class' => 'img-responsive', 'alt' => esc_attr( get_the_title() ) ) ); ?>
+                                            </a>
+                                        </div>
                                         <div class="col-sm-4">
-                                            <h2><span class="small">Featured:</span><br /> <?php the_title(); ?></h2>
+                                            <h2><span class="small"><?php _e('Featured:', 'pve_113') ?></span><br /> <?php the_title(); ?></h2>
                                             <p class="hidden-sm hidden-xs"><?php echo get_the_excerpt(); ?></p>
-                                            <p><a href="<?php the_permalink(); ?>" class="btn btn-default">View it Now!</a></p>
+                                            <p><a href="<?php the_permalink(); ?>" class="btn btn-default"<?php echo pve_113_resource_target( get_field( 'pv_event_resource_doc_type' ) ) ?>><?php _e('View it Now!', 'pve_113') ?></a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -67,7 +71,7 @@ get_header(); ?>
                                                     <div class="panel">
                                                         <div class="panel-body">
                                                         <a href="<?php the_permalink(); ?>"<?php echo pve_113_resource_target( get_field( 'pv_event_resource_doc_type' ) ) ?>>
-                                                            <img src="http://placehold.it/800x450" alt="" class="img-responsive center-block hidden-xs">
+                                                            <?php the_post_thumbnail( 'library', array( 'class' => 'img-responsive center-block', 'alt' => esc_attr( get_the_title() ) ) ); ?>
                                                         </a>
                                                         <h4><a href="<?php the_permalink(); ?>"<?php echo pve_113_resource_target( get_field( 'pv_event_resource_doc_type' ) ) ?>>
                                                             <span class="fa <?php echo pve_113_icon_class( get_field( 'pv_event_resource_doc_type' ) ) ?>"></span>
