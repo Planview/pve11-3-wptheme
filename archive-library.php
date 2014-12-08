@@ -34,7 +34,7 @@ get_header(); ?>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
-            <?php if ( have_posts() ) : $sorted_posts = pve_113_library_sort(); $activeSet = false; ?>
+            <?php if ( have_posts() ) : $sorted_posts = pve_113_library_sort(); $activeSet = false; // var_dump($sorted_posts) ?>
                 <div class="tab-content">
                 <?php foreach ($sorted_posts as $release => $release_posts) : ?>
                     <div class="release tab-pane<?php echo $activeSet ? '' : ' active'; $activeSet = true; ?>" id="<?php echo $release_posts['__object']->slug; ?>">
@@ -60,28 +60,30 @@ get_header(); ?>
                         <?php endif; ?>
                         <div class="resource-listing">
                             <div class="container">
-                                <div class="row">
-                                    <?php foreach ($release_posts as $type => $type_posts) :
-                                        if ( in_array( $type, array( '__object', '__featured' ) ) ) continue; ?>
-                                        <!-- <div class="type"> -->
-                                            <?php foreach ($type_posts as $index => $post) :
-                                                if ('__object' === $index) continue;
-                                                setup_postdata( $post ); ?>
-                                                <div class="col-sm-4 col-md-3 resource-pane">
-                                                    <div class="panel">
-                                                        <div class="panel-body">
-                                                        <a href="<?php the_permalink(); ?>"<?php echo pve_113_resource_target( get_field( 'pv_event_resource_doc_type' ) ) ?>>
-                                                            <?php the_post_thumbnail( 'library', array( 'class' => 'img-responsive center-block', 'alt' => esc_attr( get_the_title() ) ) ); ?>
-                                                        </a>
-                                                        <h4><a href="<?php the_permalink(); ?>"<?php echo pve_113_resource_target( get_field( 'pv_event_resource_doc_type' ) ) ?>>
-                                                            <span class="fa <?php echo pve_113_icon_class( get_field( 'pv_event_resource_doc_type' ) ) ?>"></span>
-                                                            <?php the_title(); ?>
-                                                        </a></h4>
-                                                        </div>
-                                                    </div>
+                                <div class="row"><?php $post_counter = 0; ?>
+                                    <?php foreach ( $release_posts as $key => $post ) :
+                                        if ('__object' === $key || '__featured' === $key ) continue;
+                                        $post_counter += 1;
+                                        setup_postdata( $post ); ?>
+                                        <div class="col-sm-4 resource-pane">
+                                            <div class="panel">
+                                                <div class="panel-body">
+                                                <a href="<?php the_permalink(); ?>"<?php echo pve_113_resource_target( get_field( 'pv_event_resource_doc_type' ) ) ?>>
+                                                    <?php the_post_thumbnail( 'library', array( 'class' => 'img-responsive center-block hidden-xs', 'alt' => esc_attr( get_the_title() ) ) ); ?>
+                                                </a>
+                                                <h4>
+                                                    <a href="<?php the_permalink(); ?>"<?php echo pve_113_resource_target( get_field( 'pv_event_resource_doc_type' ) ) ?>>
+                                                        <span class="fa <?php echo pve_113_icon_class( get_field( 'pv_event_resource_doc_type' ) ) ?>"></span>
+                                                        <?php the_title(); ?>
+                                                    </a>
+                                                    <br><small><?php $types = get_field('pv_event_resource_type'); $type = reset($types); echo $type->name; ?></small>
+                                                </h4>
                                                 </div>
-                                            <?php endforeach; ?>
-                                        <!-- </div> -->
+                                            </div>
+                                        </div>
+                                        <?php if (( 0 === $post_counter % 3 ) && ( $post_counter !== count($release_posts) - (isset($release_posts['__featured']) ? 2 : 1) ) ) : ?>
+                                </div><div class="row">
+                                        <?php endif; ?>
                                     <?php endforeach; ?>
                                 </div>
                             </div>

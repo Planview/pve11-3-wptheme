@@ -58,7 +58,7 @@ function pve_113_setup() {
     add_theme_support( 'post-thumbnails' );
 
     add_image_size( 'experts', 250, 250, true );
-    add_image_size( 'library', 240, 135, true );
+    add_image_size( 'library', 328, 184, true );
     add_image_size( 'library-featured', 800, 450, true );
 
     // This theme uses wp_nav_menu() in one location.

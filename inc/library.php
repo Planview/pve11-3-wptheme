@@ -70,36 +70,26 @@ function pve_113_library_sort() {
             the_post();
 
             $release = get_field( 'pv_event_resource_release' );
-            $type = get_field( 'pv_event_resource_type' );
+
+            if ( ! $release ) continue;
 
             $release = reset($release);
-            $type = reset($type);
 
             if ( ! isset( $sorted_list[$release->name] ) ) {
                 $sorted_list[$release->name] = array();
                 $sorted_list[$release->name]['__object'] = $release;
             }
 
-            if ( ! isset( $sorted_list[$release->name][$type->name] ) ) {
-                $sorted_list[$release->name][$type->name] = array();
-                $sorted_list[$release->name][$type->name]['__object'] = $type;
-            }
-
             if ( get_field( 'pv_event_resource_featured') && ! isset( $sorted_list[$release->name]['__featured'] ) ) {
                 $sorted_list[$release->name]['__featured'] = $GLOBALS['post'];
             } else {
-                $sorted_list[$release->name][$type->name][] = $GLOBALS['post'];
+                $sorted_list[$release->name][] = $GLOBALS['post'];
             }
         }
     }
 
     uksort( $sorted_list, 'strcasecmp' );
     $sorted_list = array_reverse( $sorted_list );
-
-    foreach ( $sorted_list as $release_name => $release_array ) {
-        uksort( $release_array, 'strcasecmp' );
-        $sorted_list[$release_name] = $release_array;
-    }
 
     return $sorted_list;
 }
