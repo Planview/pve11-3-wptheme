@@ -42,6 +42,12 @@ get_header(); ?>
                         <h3 class="section-title">Resources</h3>
                         <?php pve_113_resource_list( get_field( 'pv_event_presentation_resources' ) ); ?>
                     </aside>
+                    <aside class="survey-callout">
+                        <h3 class="section-title">Take the Survey</h3>
+                        <a href="#" class="btn btn-default btn-block btn-lg" target="_blank">
+                            Go Now
+                        </a>
+                    </aside>
                 </div>
             </div>
         </div><!-- #primary -->

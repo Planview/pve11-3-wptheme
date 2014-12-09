@@ -23,7 +23,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-sm-9 experts">
                     <section>
-                        <h3 class="section-title">Ask a Question</h3>
+                        <h3 class="section-title">Ask the Experts</h3>
                         <?php echo do_shortcode( get_field( 'pv_event_topic_qa_form' ) ); ?>
                     </section>
                     <?php if ( have_rows( 'pv_event_speakers' ) ) : ?>
