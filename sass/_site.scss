@@ -41,25 +41,29 @@ body {
 
 .navbar {
     margin-bottom: 0;
-        &.headroom {
-            transition: all .4s ease-in-out;
-        }
-        &.headroom--unpinned {
-            top: -100px;
+    &.headroom {
+        transition: all .4s ease-in-out;
+    }
+    &.headroom--unpinned {
+        top: -100px;
+    }
+    &.headroom--pinned, &.headroom--top {
+        top: 0;
+    }
+    .admin-bar & {
+        &.headroom--top {
+            top: 46px;
         }
         &.headroom--pinned, &.headroom--top {
-            top: 0;
-        }
-        .admin-bar & {
-            &.headroom--top {
-                top: 46px;
-            }
-            &.headroom--pinned, &.headroom--top {
-                @media screen and (min-width: $screen-sm-min) {
-                    top: 32px;
-                }
+            @media screen and (min-width: $screen-sm-min) {
+                top: 32px;
             }
         }
+    }
+    .dropdown-header {
+        font-size: $font-size-base;
+        font-weight: $headings-font-weight;
+    }
 }
 
 #survey {

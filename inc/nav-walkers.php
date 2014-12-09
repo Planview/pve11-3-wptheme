@@ -46,10 +46,19 @@ class The_Bootstrap_Nav_Walker extends Walker_Nav_Menu {
         $attributes .=  $item->url          ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
         $attributes .=  $args->has_children ? ' class="dropdown-toggle" data-toggle="dropdown"' : '';
 
-        $item_output    =   $args->before . '<a' . $attributes . '>';
-        $item_output    .=  $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
-        $item_output    .=  ( $args->has_children AND 1 > $depth ) ? ' <b class="caret"></b>' : '';
-        $item_output    .=  '</a>' . $args->after;
+        error_log(var_export($item, true));
+        error_log(var_export($classes, true));
+
+        if ( ! in_array( 'divider', $classes ) && ! in_array( 'dropdown-header', $classes ) ) {
+            $item_output    =   $args->before . '<a' . $attributes . '>';
+            $item_output    .=  $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+            $item_output    .=  ( $args->has_children AND 1 > $depth ) ? ' <b class="caret"></b>' : '';
+            $item_output    .=  '</a>' . $args->after;
+        } elseif ( in_array( 'dropdown-header', $classes ) ) {
+            $item_output    =  $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+        } else {
+            $item_output = '';
+        }
 
         $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
     }
