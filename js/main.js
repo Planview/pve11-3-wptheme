@@ -9,7 +9,10 @@ jQuery(document).ready(function ($) {
 
   var headroomOptions = {
     offset: 100,
-    tolerance: 5
+    tolerance: 5,
+    onUnpin: function () {
+      $('.dropdown.open .dropdown-toggle').dropdown('toggle');
+    }
   };
 
   $('#header').headroom(headroomOptions);
