@@ -5,12 +5,10 @@
         display: none;
     }
 }
-#response-cont > .comment-title {
+#comments .comment-title {
     display: none;
 }
-.comment-title {
-    @extend .h3;
-}
+
 #commentlist, .children {
     list-style: none;
     padding-left: 0;

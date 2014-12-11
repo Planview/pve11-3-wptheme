@@ -30,12 +30,15 @@ get_header(); ?>
         <div id="primary" class="content-area container">
             <div class="row">
                 <div class="col-sm-9 comments">
-                    <?php
-                        // If comments are open or we have at least one comment, load up the comment template
-                        if ( comments_open() || get_comments_number() ) :
-                            comments_template();
-                        endif;
-                    ?>
+                    <div class="presentation-comments">
+                        <h3 class="section-title comments-title">Comments</h3>
+                        <?php
+                            // If comments are open or we have at least one comment, load up the comment template
+                            if ( comments_open() || get_comments_number() ) :
+                                comments_template();
+                            endif;
+                        ?>
+                    </div>
                 </div>
                 <div class="col-sm-3">
                     <aside class="resource-list">
