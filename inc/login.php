@@ -74,3 +74,4 @@ function pve_113_login_access() {
 }
 add_action( 'wp', 'pve_113_login_access' );
 
+add_action( 'gform_encrypt_password', '__return_true' );
