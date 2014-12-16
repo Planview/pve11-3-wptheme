@@ -20,7 +20,7 @@
 <?php endif; ?>
 
 <div class="input-group">
-<span class="input-group-addon hidden-xs">Ask the Presenters a Question</span>
+<span class="input-group-addon hidden-xs qa-title">Ask the Presenters a Question</span>
 <?php foreach ( $this->fields as $field ) :
 
     // Formatting for 'standard' form fields
