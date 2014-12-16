@@ -122,9 +122,12 @@ body.home.not-logged-in {
     text-align: center;
     color: #fff;
     margin-bottom: 20px;
+    li {
+        margin-bottom: 5px;
+    }
     a {
         color: #fff;
-        font-weight: 800;
+        text-decoration: underline;
         &:hover, &:active {
             color: #eee;
         }
