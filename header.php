@@ -8,7 +8,6 @@
  */
 get_header('head'); ?>
 
-<div id="page" class="hfeed site">
     <a class="skip-link sr-only" href="#content"><?php _e( 'Skip to content', 'pve_113' ); ?></a>
 
     <nav id="header" class="navbar navbar-default navbar-fixed-top" role="navigation">

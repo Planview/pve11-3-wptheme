@@ -184,3 +184,21 @@ function pve_113_make_img( $data, $classes = array(), $size = null, $title = nul
         esc_attr( implode(' ', $classes) )
     );
 }
+
+function pve_113_blueimp_gallery_html( $tag, $handle ) {
+    if ( ! in_array( $handle, array( 'blueimp-gallery', 'blueimp-gallery-jquery' ) ) )
+        return $tag;
+
+    $tag = '<div id="blueimp-gallery" class="blueimp-gallery">' .
+        '<div class="slides"></div>' .
+        '<h3 class="title"></h3>' .
+        '<a class="prev">‹</a>' .
+        '<a class="next">›</a>' .
+        '<a class="close">×</a>' .
+        '<a class="play-pause"></a>' .
+        '<ol class="indicator"></ol>' .
+    '</div>' . $tag;
+
+    return $tag;
+}
+add_filter( 'script_loader_tag', 'pve_113_blueimp_gallery_html', 10, 2 );

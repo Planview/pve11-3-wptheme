@@ -124,6 +124,19 @@ function pve_113_scripts() {
             '/bower_components/stellar/jquery.stellar.min.js', array( 'jquery' ),
             '0.6.2', true );
 
+    wp_register_script( 'blueimp-gallery', get_stylesheet_directory_uri() .
+        '/bower_components/blueimp-gallery/js/blueimp-gallery.min.js', array(), '2.15.2', true );
+    wp_register_script( 'blueimp-gallery-jquery', get_stylesheet_directory_uri() .
+        '/bower_components/blueimp-gallery/js/jquery.blueimp-gallery.min.js',
+        array( 'jquery' ), '2.15.2', true );
+    wp_register_style( 'blueimp-gallery', get_stylesheet_directory_uri() .
+        '/bower_components/blueimp-gallery/css/blueimp-gallery.min.css' );
+
+    if ( is_page() ) {
+        wp_enqueue_script( 'blueimp-gallery-jquery' );
+        wp_enqueue_style( 'blueimp-gallery' );
+    }
+
     if ( defined('LIVERELOAD_PORT') ) {
         wp_enqueue_script( 'livereload', 'http://127.0.0.1:' . LIVERELOAD_PORT . '/livereload.js?snipver=1' );
     }
