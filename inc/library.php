@@ -80,7 +80,8 @@ function pve_113_library_sort() {
                 $sorted_list[$release->name]['__object'] = $release;
             }
 
-            if ( get_field( 'pv_event_resource_featured') && ! isset( $sorted_list[$release->name]['__featured'] ) ) {
+            if ( get_field( 'pv_event_resource_featured' ) &&
+                    ! isset( $sorted_list[$release->name]['__featured'] ) ) {
                 $sorted_list[$release->name]['__featured'] = $GLOBALS['post'];
             } else {
                 $sorted_list[$release->name][] = $GLOBALS['post'];
@@ -88,8 +89,13 @@ function pve_113_library_sort() {
         }
     }
 
-    uksort( $sorted_list, 'strcasecmp' );
-    $sorted_list = array_reverse( $sorted_list );
+    uasort( $sorted_list, function ($a, $b) {
+        $a_val = get_field( 'pve_113_library_sort_order',
+            "{$a['__object']->taxonomy}_{$a['__object']->term_id}" );
+        $b_val = get_field( 'pve_113_library_sort_order',
+            "{$b['__object']->taxonomy}_{$b['__object']->term_id}" );
+        return $a_val - $b_val;
+    } );
 
     return $sorted_list;
 }
