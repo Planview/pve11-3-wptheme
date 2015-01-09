@@ -42,7 +42,7 @@ get_header(); ?>
                                                 ); ?>
                                             </a>
                                             <div class="caption">
-                                                <h4><?php the_sub_field('name') ?><br>
+                                                <h4><a data-toggle="modal" data-target="#<?php echo sanitize_title( get_sub_field('name') ); ?>" href="#<?php echo sanitize_title( get_sub_field('name') ); ?>"><?php the_sub_field('name') ?></a><br>
                                                 <span class="text-muted"><?php the_sub_field('title') ?></span>
                                                 </h4>
 
