@@ -202,3 +202,25 @@ function pve_113_blueimp_gallery_html( $tag, $handle ) {
     return $tag;
 }
 add_filter( 'script_loader_tag', 'pve_113_blueimp_gallery_html', 10, 2 );
+
+
+function pve_113_marketo_home() {
+    if (!is_front_page() || !is_user_logged_in()) return;
+
+    add_action( 'wp_footer', function () {
+        ?>
+        <script>
+        (function (global) {
+            var munchkin = global.Munchkin;
+            console.log(munchkin);
+            if (typeof munchkin !== 'undefined') {
+                munchkin.munchkinFunction('visitWebPage', {
+                    url: global.location.href, params: 'loggedin'
+                });
+            }
+        }(this));
+        </script>
+        <?php
+    }, 9999 );
+}
+add_action( 'wp_head', 'pve_113_marketo_home' );
