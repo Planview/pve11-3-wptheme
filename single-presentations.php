@@ -46,9 +46,9 @@ get_header(); ?>
                         <?php pve_113_resource_list( get_field( 'pv_event_presentation_resources' ) ); ?>
                     </aside>
                     <aside class="survey-callout">
-                        <h3 class="section-title">Take the Survey</h3>
-                        <a href="#" class="btn btn-default btn-block btn-lg" target="_blank">
-                            Go Now
+                        <h3 class="section-title">Survey</h3>
+                        <a href="http://www.surveygizmo.com/s3/1955258/2015-Planview-Enterprise-11-3-Product-Launch-Event" class="btn btn-default btn-block btn-lg" target="_blank">
+                            Take the Survey
                         </a>
                     </aside>
                 </div>

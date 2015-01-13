@@ -37,7 +37,7 @@ get_header('head'); ?>
         </div>
     </nav>
 
-    <a href="" id="survey">
+    <a href="http://www.surveygizmo.com/s3/1955258/2015-Planview-Enterprise-11-3-Product-Launch-Event" id="survey" target="_blank">
         <span class="survey-text"><?php _e( 'Take the Survey', 'pve_113' ); ?></span>
         <span class="fa fa-bullhorn"></span>
     </a>
