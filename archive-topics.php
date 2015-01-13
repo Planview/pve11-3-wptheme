@@ -4,7 +4,7 @@ get_header(); ?>
     <header class="jumbotron jumbo-header">
         <div class="container">
             <h1>
-                <?php _e('Enhancements', 'pve_113'); ?>
+                <?php _e('Enhancements &amp; Services', 'pve_113'); ?>
             </h1>
         </div>
     </header>
