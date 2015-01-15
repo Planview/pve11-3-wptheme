@@ -175,7 +175,7 @@ function pve_113_make_img( $data, $classes = array(), $size = null, $title = nul
     $classes[] = "wp-img-{$data['id']}";
 
     return sprintf(
-        '<img src="%s" height="%s" width="%s" alt="%s" title="%s" class="%s" >',
+        '<img src="%s" alt="%s" title="%s" class="%s" >',
         $src,
         $height,
         $width,
@@ -224,3 +224,21 @@ function pve_113_marketo_home() {
     }, 9999 );
 }
 add_action( 'wp_head', 'pve_113_marketo_home' );
+
+function pve_113_featured_image( $size, $classes, $echoImg = true ) {
+    ob_start();
+    the_post_thumbnail( $size, array(
+        'class' => $classes,
+        'alt' => esc_attr( get_the_title() )
+    ) );
+    $image = ob_get_clean();
+
+    $image = preg_replace('/\s+width="[0-9]*"/', '', $image);
+    $image = preg_replace('/\s+height="[0-9]*"/', '', $image);
+
+    if ($echoImg) {
+        echo $image;
+    } else {
+        return $image;
+    }
+}

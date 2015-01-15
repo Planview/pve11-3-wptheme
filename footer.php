@@ -11,7 +11,17 @@
 
     <footer class="site-footer">
       <div class="container">
-        <p class="text-center pv-footer"><a href="http://planview.com"><span class="pv-logo">Planview</span></a></p>
+        <ul class="list-inline text-center">
+            <li>
+                <a href="mailto:newrelease@planview.com">Need Help? Contact Us</a>
+            </li>
+            <?php if (is_user_logged_in()) : ?>
+                <li>
+                    <a href="<?php echo wp_logout_url( home_url() ); ?>" rel="nofollow">Log Out</a>
+                </li>
+            <?php endif; ?>
+        </ul>
+        <p class="text-center pv-footer"><a href="http://planview.com"><span class="pv-logo bg-size">Planview</span></a></p>
         <p class="copyright text-center"><?php printf(__('&copy; %s Planview, Inc., All Rights Reserved.', 'pve_113'), date('Y')); ?></p>
       </div>
     </footer>

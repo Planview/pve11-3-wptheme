@@ -19,3 +19,17 @@
 .admin-bar .modal {
     top: 32px;
 }
+.lt-ie9 input {
+    font-family: Arial !important;
+}
+.lt-ie9 .fa,
+.lt-ie9 .glyphicon {
+    display: none !important;
+    &:before,
+    &:after {
+        display: none !important;
+    }
+}
+.lt-ie9 .logout-nav {
+    display: none !important;
+}

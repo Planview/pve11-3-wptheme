@@ -1,28 +1,37 @@
 jQuery(document).ready(function ($) {
   var $body = $('body');
-  if ($body.hasClass('home')) {
+  if ($body.hasClass('home') && !$('html').hasClass('lt-ie9')) {
     $.stellar({
       horizontalScrolling: false,
       verticalOffset: 40
     });
   }
 
-  var headroomOptions = {
-    offset: 100,
-    tolerance: 5,
-    onUnpin: function () {
-      $('.dropdown.open .dropdown-toggle').dropdown('toggle');
-    }
-  };
+  if ($('html').hasClass('lt-ie9')) {
+    $(function() {
+        var $ss = $('#pve_113-style-css');
+        $ss[0].href = $ss[0].href;
+    });
+  }
 
-  $('#header').headroom(headroomOptions);
+  if (!$('html').hasClass('lt-ie10')) {
+    var headroomOptions = {
+      offset: 100,
+      tolerance: 5,
+      onUnpin: function () {
+        $('.dropdown.open .dropdown-toggle').dropdown('toggle');
+      }
+    };
 
-  $('#survey').headroom(headroomOptions);
-  $('#survey').on('mouseover', function () {
-    $(this).find('.survey-text').animate({'width': 140}, 400);
-  }).on('mouseleave', function () {
-    $(this).find('.survey-text').animate({'width': 0}, 400);
-  });
+    $('#header').headroom(headroomOptions);
+
+    $('#survey').headroom(headroomOptions);
+    $('#survey').on('mouseover', function () {
+      $(this).find('.survey-text').animate({'width': 140}, 400);
+    }).on('mouseleave', function () {
+      $(this).find('.survey-text').animate({'width': 0}, 400);
+    });
+  }
 
   $(window).on('resize', _.throttle(function (e) {
     $('.limelight-video-respond').each(function () {

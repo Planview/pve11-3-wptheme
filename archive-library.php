@@ -46,7 +46,7 @@ get_header(); ?>
                                     <div class="row">
                                         <div class="col-sm-8">
                                             <a href="<?php the_permalink(); ?>"<?php echo pve_113_resource_target( get_field( 'pv_event_resource_doc_type' ) ) ?>>
-                                                <?php the_post_thumbnail( 'library-featured', array( 'class' => 'img-responsive', 'alt' => esc_attr( get_the_title() ) ) ); ?>
+                                                <?php pve_113_featured_image( 'library-featured', 'img-responsive' ); ?>
                                             </a>
                                         </div>
                                         <div class="col-sm-4">
@@ -69,7 +69,7 @@ get_header(); ?>
                                             <div class="panel">
                                                 <div class="panel-body">
                                                 <a href="<?php the_permalink(); ?>"<?php echo pve_113_resource_target( get_field( 'pv_event_resource_doc_type' ) ) ?>>
-                                                    <?php the_post_thumbnail( 'library', array( 'class' => 'img-responsive center-block hidden-xs', 'alt' => esc_attr( get_the_title() ) ) ); ?>
+                                                    <?php pve_113_featured_image( 'library', 'img-responsive center-block hidden-xs' ); ?>
                                                 </a>
                                                 <h4>
                                                     <a href="<?php the_permalink(); ?>"<?php echo pve_113_resource_target( get_field( 'pv_event_resource_doc_type' ) ) ?>>

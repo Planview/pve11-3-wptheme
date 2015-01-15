@@ -89,6 +89,10 @@ body.home.not-logged-in {
       repeat: no-repeat;
     }
   }
+  .ie8 & {
+    background-attachment: scroll;
+    background-position: center center;
+  }
 }
 
 .home.not-logged-in .image-banner {

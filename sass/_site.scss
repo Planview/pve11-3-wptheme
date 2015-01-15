@@ -10,6 +10,12 @@
       top: 40px;
     }
   }
+  a {
+    color: #ddd;
+    &:hover {
+      color: #fff;
+    }
+  }
 }
 .pv-footer {
   @media screen and (min-width: $screen-sm-min) {
@@ -107,6 +113,9 @@ body {
             color:#fff;
             text-decoration: none;
             background-color: #ca3f3f;
+        }
+        .lt-ie10 & {
+            display: none !important;
         }
     }
 }

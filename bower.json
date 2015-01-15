@@ -21,6 +21,7 @@
     "stellar": "~0.6.2",
     "background-size-polyfill": "~0.2.0",
     "headroom.js": "~0.7.0",
-    "blueimp-gallery": "~2.15.2"
+    "blueimp-gallery": "~2.15.2",
+    "modernizr": "~2.8.3"
   }
 }

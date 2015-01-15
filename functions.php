@@ -115,6 +115,8 @@ function pve_113_scripts() {
             '/css/style.css', array('avenir') );
     }
 
+    wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() .
+        '/bower_components/modernizr/modernizr.js', array(), '2.8', false );
     wp_register_script( 'headroom', get_stylesheet_directory_uri() .
         '/bower_components/headroom.js/dist/headroom.js', '0.7.0', true );
     wp_register_script( 'jquery.headroom', get_stylesheet_directory_uri() .
