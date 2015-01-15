@@ -20,6 +20,41 @@ get_header(); ?>
                         <div class="thumbnail limelight-video-respond">
                             <?php echo preg_replace('/<param[^>]*name="wmode"[^>]*>/', '<param name="wmode" value="transparent"/>', get_field( 'pv_event_presentation_video' ) ); ?>
                         </div>
+                        <?php if ( get_field( 'pve_113_show_limelight_failure_message' ) ) : ?>
+                            <script>
+                              jQuery(document).ready(function ($) {
+                                $('.pre-limelight-load').show();
+                              });
+
+                              function limelightPlayerCallback(playerId, eventName, data) {
+                                'use strict';
+
+                                var $ = window.jQuery,
+                                    id = $('.LimelightEmbeddedPlayerFlash').attr('id'),
+                                    spoofMunchkin = function spoofer(queryString) {
+                                      if ('undefined' !== typeof window.Munchkin) {
+                                        window.Munchkin.munchkinFunction('visitWebPage', {
+                                          url: global.location.href, params: queryString
+                                        });
+                                      } else {
+                                        setTimeout(function () {
+                                          spoofer(queryString);
+                                        }, 1000);
+                                      }
+                                    };
+
+                                if (eventName == 'onPlayerLoad' && (LimelightPlayer.getPlayers() == null || LimelightPlayer.getPlayers().length == 0)) {
+                                  LimelightPlayer.registerPlayer(id);
+                                }
+
+                                if (eventName === 'onPlayerLoad') {
+                                  $('.pre-limelight-load').remove();
+                                  spoofMunchkin('playerload');
+                                }
+                              }
+                            </script>
+                            <p class="pre-limelight-load">This presentation uses live-streaming video over Limelight Networks. If the player does not load, please contact your company&rsquo;s IT department. You can also view a <a href="#">pre-recorded version of the presentation here</a>.</p>
+                        <?php endif; ?>
                         <div class="qa-form">
                         <?php echo do_shortcode( get_field('pv_event_presentation_qa_form') ); ?>
                         </div>

@@ -144,3 +144,16 @@ body {
         width: 450px;
     }
 }
+.single-presentations .pre-limelight-load,
+.single-topics .pre-limelight-load {
+    display: none;
+    color: #fff;
+    margin-top: 30px;
+    a {
+        color: #ddd;
+        text-decoration: underline;
+        &:hover {
+            color: #fff;
+        }
+    }
+}

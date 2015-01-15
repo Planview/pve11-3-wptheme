@@ -19,3 +19,4 @@ function pve_113_custom_fields($filename) {
 include_once pve_113_custom_fields('front-page.php');
 include_once pve_113_custom_fields('pages.php');
 include_once pve_113_custom_fields('library-sort.php');
+include_once pve_113_custom_fields('presentations.php');
