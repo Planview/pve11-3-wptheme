@@ -1,3 +1,7 @@
+body.home .modal-backdrop  {
+      z-index: 0;
+}
+
 body.home.not-logged-in {
     padding-top: 0;
 }
