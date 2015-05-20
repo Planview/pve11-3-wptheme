@@ -53,7 +53,7 @@ get_header(); ?>
                                 }
                               }
                             </script>
-                            <p class="pre-limelight-load">This presentation uses live-streaming video over Limelight Networks. If the player does not load, please contact your company&rsquo;s IT department. You can also view a <a href="#">pre-recorded version of the presentation here</a>.</p>
+                            <p class="pre-limelight-load">This presentation uses live-streaming video over Limelight Networks. If the player does not load, please contact your company&rsquo;s IT department. You can also view a <a href="https://new-release.planview.com/presentations/planview-enterprise-11-3-2/">pre-recorded version of the presentation here</a>.</p>
                         <?php endif; ?>
                         <div class="qa-form">
                         <?php echo do_shortcode( get_field('pv_event_presentation_qa_form') ); ?>
