@@ -1,9 +1,9 @@
 
 .comment-title, .section-title {
-    border-bottom: 3px solid $gray;
+    border-bottom: none;
     margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: 300;
+    text-transform: none;
+    font-weight: 400;
 }
 
 .single-presentations, .single-topics {
@@ -14,10 +14,10 @@
         }
     }
     .comment-title, .section-title {
-        border-bottom: 3px solid $gray;
+        border-bottom: none;
         margin-bottom: 20px;
-        text-transform: uppercase;
-        font-weight: 300;
+        text-transform: none;
+        font-weight: 400;
     }
     .limelight-video-respond {
         margin-bottom: 0;
@@ -41,29 +41,29 @@
 
 .single-presentations {
     .video {
-        background-color: #345770;
+        background-color: #e0e0e0;
     }
     .qa-title {
         font-weight: 800;
         background-color: $gray-dark;
-        color: #fff;
+        color: $white;
     }
     .qa-form {
         margin-top: 30px;
     }
     .qa-confirm {
         margin-top: 30px;
-        color: #fff;
+        color: $white;
     }
     .comment-title, .section-title {
-        border-bottom-color: #345770;
-        color: #345770;
+        //border-bottom-color: #345770;
+        //color: #345770;
     }
 }
 
 .single-topics {
     .video {
-        background-color: #67873a;
+        background-color: #e0e0e0;
     }
     // .qa-form {
     //     margin-top: 15px;
@@ -72,8 +72,8 @@
     //     color: #fff;
     // }
     .comment-title, .section-title {
-        border-bottom-color: #67873a;
-        color: #67873a;
+        //border-bottom-color: #67873a;
+        //color: #67873a;
     }
 }
 
@@ -85,5 +85,5 @@
 }
 
 .panel-topics {
-    @include panel-variant(#ddd, #fff, #67873a, #ddd);
+    @include panel-variant(#ddd, $white, #67873a, #ddd);
 }

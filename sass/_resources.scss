@@ -1,21 +1,25 @@
 .resources-tabs {
-    background-color: #ccc;
+    background-color: $brand-default;
     // padding: 5px 0;
     li a {
-        font-weight: 800;
-        color: #1a3f58;
+        font-weight: 400;
+        color: $white;
+        background-color: $gray-dark;
+    }
+    li a:selected {
+        color: $brand-default;
     }
 }
 
 .featured-resource {
-    background-color: #9a5b7d;
+    background-color: $white;
     padding:{
         top: 40px;
         bottom: 40px;
     }
-    color: white;
+    color: $brand-default;
     .text-muted, small, .small {
-        color: $gray-lighter
+        color: $gray;
     }
 }
 .resource-listing {

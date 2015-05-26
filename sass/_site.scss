@@ -1,5 +1,5 @@
 .site-footer {
-  background-color: #1a3f58;
+  background-color: $brand-default;
   color: #fff;
   padding: {
     top: 20px;
@@ -43,6 +43,7 @@
 
 body {
     padding-top: $navbar-height;
+    background-color: $white;
 }
 
 .navbar {
@@ -74,7 +75,7 @@ body {
 
 #survey {
     display: none;
-    @media screen and (min-width: 783px) {
+    /*@media screen and (min-width: 783px) {
         display: block;
         position: fixed;
         right: 30px;
@@ -82,20 +83,20 @@ body {
         border-radius: 4px;
         color: #fff;
         padding: 10px 15px;
-        top: 30px;
+        top: 30px;*/
         // border: 1px solid #fff;
-        z-index: 1000;
-        * { display: inline-block; }
+        /*z-index: 1000;
+        * { display: inline-block; }*/
         // border-color: rgba(255,255,255,0.6);
-        &.headroom {
+        /*&.headroom {
             transition: all .3s ease-in-out;
         }
         &.headroom--unpinned {
             opacity: 1;
         }
-        &.headroom--pinned, &.headroom--top {
+        &.headroom--pinned, &.headroom--top {*/
             // top: -100px;
-            opacity: 0;
+            /*opacity: 0;
         }
         .admin-bar & {
             top: 62px;
@@ -117,43 +118,43 @@ body {
         .lt-ie10 & {
             display: none !important;
         }
-    }
+    }*/
 }
 
 .navbar-brand {
     @include text-hide();
     background:{
-        image: url('../img/planview-enterprise-11-3-logo.png');
+        image: url('../img/logo-planview-new-release-black.png');
         position: center center;
         size: contain;
         repeat: no-repeat;
     }
-    width: 200px;
+    width: 153px;
     margin-left: 10px;
     @media screen and (min-width: 350px) {
-        width: 250px;
+        width: 153px;
     }
     @media screen and (min-width: $screen-sm-min) {
-        width: 300px;
+        width: 153px;
         margin-left: 0 !important;
     }
     @media screen and (min-width: $screen-md-min) {
-        width: 400px;
+        width: 153px;
     }
     @media screen and (min-width: $screen-lg-min) {
-        width: 450px;
+        width: 153px;
     }
 }
 .single-presentations .pre-limelight-load,
 .single-topics .pre-limelight-load {
     display: none;
-    color: #fff;
+    color: $white;
     margin-top: 30px;
     a {
         color: #ddd;
         text-decoration: underline;
         &:hover {
-            color: #fff;
+            color: $white;
         }
     }
 }

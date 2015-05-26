@@ -30,7 +30,7 @@
     padding: 10px;
     border-radius: 2px;
     border: 1px solid #ccc;
-    background-color: #fff;
+    background-color: $white;
     @include clearfix();
     // display: table-row;
     width: 100%;
@@ -68,7 +68,7 @@
     margin-top: 5px;
     display: block;
     #comment-form & {
-        border-bottom-color: #fff;
+        border-bottom-color: $white;
     }
 }
 .fn {
