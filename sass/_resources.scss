@@ -11,6 +11,10 @@
     li a:selected {
         color: $brand-default;
     }
+    li a:hover {
+        background-color: $brand-default;
+        color: $white;
+    }
 }
 
 .featured-resource {

@@ -13,7 +13,6 @@ body.home.not-logged-in {
       top: 20px;
       bottom: 20px;
     }
-    //box-shadow: 0 0 200px rgba(0,0,0,0.3) inset;
     h1 {
       margin-bottom: 0;
     }
@@ -26,6 +25,9 @@ body.home.not-logged-in {
 }
 
 .home.not-logged-in .jumbotron {
+  h1 {
+      margin-bottom: 25px;
+    }
   color: $white;
   background: {
     color: $white;
@@ -35,7 +37,6 @@ body.home.not-logged-in {
       top: 50px;
       bottom: 50px;
     }
-    //box-shadow: 0 0 120px rgba(0,0,0,0.3) inset;
   }
   @media screen and (min-width: $screen-lg-min) {
     padding: {
@@ -81,15 +82,18 @@ body.home.not-logged-in {
 
 .home.not-logged-in .btn {
   font-weight: 800;
+  margin-top: 25px;
 }
 
 .home.not-logged-in .btn-default {
   border-color: $gray;
+  margin-left: 10px;
 }
 
 .home.not-logged-in .image-banner .btn-default {
   background-color: transparent;
   color: $white;
+  border-color: $white;
 }
 
 
