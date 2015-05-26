@@ -4,7 +4,9 @@
     li a {
         font-weight: 400;
         color: $white;
-        background-color: $gray-dark;
+        background-color: $gray;
+        font-size: 20px;
+        padding: 5px;
     }
     li a:selected {
         color: $brand-default;
@@ -23,6 +25,7 @@
     }
 }
 .resource-listing {
+    background-color: #eee;
     padding: {
         top: 30px;
         bottom: 0;
