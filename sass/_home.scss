@@ -5,20 +5,22 @@ body.home.not-logged-in {
 .home .jumbotron {
   h1 {
     font-weight: 300;
+    color: $brand-default;
   }
   margin-bottom: 0;
   @media screen and (min-width: $screen-sm-min) {
     padding: {
-      top: 30px;
-      bottom: 30px;
+      top: 20px;
+      bottom: 20px;
     }
     //box-shadow: 0 0 200px rgba(0,0,0,0.3) inset;
     h1 {
-      margin-bottom: 36px;
+      margin-bottom: 0;
     }
     p {
-      font-size: 22px;
+      font-size: 20px;
       color: $brand-default;
+      padding-bottom: 5px;
     }
   }
 }
@@ -44,9 +46,7 @@ body.home.not-logged-in {
 }
 
 .home.logged-in .jumbotron {
-  @media screen and (min-width: $screen-sm-min) {
-    //box-shadow: 0 0 100px rgba(0,0,0,0.3) inset;
-  }
+  background-color: #eee;
 }
 
 .jumbotron {
@@ -80,10 +80,18 @@ body.home.not-logged-in {
 }
 
 .home.not-logged-in .btn {
-  border-color: $white;
-  // border-width: 3px;
   font-weight: 800;
 }
+
+.home.not-logged-in .btn-default {
+  border-color: $gray;
+}
+
+.home.not-logged-in .image-banner .btn-default {
+  background-color: transparent;
+  color: $white;
+}
+
 
 .home .image-banner {
   padding: {
@@ -124,14 +132,14 @@ body.home.not-logged-in {
       image: url('../img/laptop-app-bg-light.jpg');
     }
     padding: {
-      top: 40px;
-      bottom: 40px;
+      top: 70px;
+      bottom: 60px;
     }
   }
 }
 
 .home-callout {
-    padding: 30px 20px;
+    padding: 20px 35px;
     text-align: center;
     color: $white;
     margin-bottom: 20px;
@@ -146,14 +154,32 @@ body.home.not-logged-in {
         }
     }
     &.main {
-        background-color: #345770;
+        background-color: $brand-default;
     }
     &.topics {
         background-color: #67873a;
     }
     &.resources {
-        background-color: #9a5b7d;
+        background-color: $brand-primary;
     }
+}
+
+.home-callout h3 a {
+  text-decoration: none;
+  font-weight: normal;
+  margin-bottom: 25px;
+}
+
+.home-callout h3 img {
+  padding-bottom: 15px;
+}
+
+.home-callout p {
+  text-align: left;
+}
+
+.home-callout p.image {
+  text-align: center;
 }
 
 .home-note-after {
@@ -168,4 +194,9 @@ body.home.not-logged-in {
             color: #e3eaf0;
         }
     }
+}
+
+.home.not-logged-in  .lead li {
+  padding-bottom: 15px;
+  font-size: 20px;
 }

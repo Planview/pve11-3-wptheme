@@ -14,7 +14,7 @@ if ( have_posts() ) :
     while ( have_posts() ) : the_post(); ?>
         <?php if ( get_field('113_front_auth_jumbotron_content') ) : ?>
             <div class="jumbotron">
-                <div class="container text-center">
+                <div class="container">
                     <?php the_field('113_front_auth_jumbotron_content'); ?>
                 </div>
             </div>
