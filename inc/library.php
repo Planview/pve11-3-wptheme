@@ -21,6 +21,8 @@ function pve_113_resource_post_link( $permalink, $post ) {
             $file = get_field( 'pv_event_resource_file', $post->ID );
             return $file['url'];
         case 'slideshare':
+	case 'video':
+	    return get_field( 'pv_event_resource_video_code', $post->ID );
         case 'link':
             return trim( get_field( 'pv_event_resource_url', $post->ID ) );
     }
@@ -110,6 +112,7 @@ function pve_113_resource_target($type) {
         case 'link':
             return ' target="_blank"';
         case 'video':
+            return ' class="pop-up-video"';
         default:
             return '';
     }
