@@ -52,7 +52,7 @@ get_header(); ?>
                                         <div class="col-sm-4">
                                             <h2><span class="small"><?php _e('Featured:', 'pve_113') ?></span><br /> <?php the_title(); ?></h2>
                                             <p class="hidden-sm hidden-xs"><?php echo get_the_excerpt(); ?></p>
-                                            <p><a href="<?php the_permalink(); ?>" class="btn btn-success"<?php echo pve_113_resource_target( get_field( 'pv_event_resource_doc_type' ) ) ?>><?php _e('View it Now!', 'pve_113') ?></a></p>
+                                            <p><a href="<?php the_permalink(); ?>" class="btn btn-success pop-up-video"><?php _e('View it Now!', 'pve_113') ?></a></p>
                                         </div>
                                     </div>
                                 </div>
