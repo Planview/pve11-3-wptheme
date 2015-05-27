@@ -92,21 +92,17 @@ jQuery(document).ready(function ($) {
 			'height'			: '100%', //321 = actual limelight player height
         	'maxWidth'			: 800,
 			'maxHeight'			: 600,
-        	'titleShow'			: false,
-			//'title'				: this.title,
-			//'titleShow'			: true,
-			//'titlePosition'		: 'inside',
+			'titleShow'			: true,
+			'titlePosition'		: 'inside',
         	'openEffect'		: 'elastic',
 			'closeEffect'		: 'elastic',
 			'type'				: 'iframe'
 		});
 		// style the fancybox iframe pop-up (used for youtube videos)
-/*
 		$("body").on('click', 'a.pop-up-iframe', function() {
 			$( "div#fancybox-title" ).css( "margin-left", "0" );
 			$( "div#fancybox-title" ).css( "margin-right", "0" );
 		});
-*/
 	}	
 	//-- fancybox iframe pop-up (used for limelight videos)
 	if ( jQuery('a.pop-up-video').length ) { //if exists	
@@ -117,10 +113,8 @@ jQuery(document).ready(function ($) {
 			'autoplay'     		: true,
 			'autoScale'     	: true,
         	'href'				: this.href,
-			'titleShow'			: false,
-			//'title'				: this.title,
-			//'titleShow'			: true,
-			//'titlePosition'		: 'inside',
+			'titleShow'			: true,
+			'titlePosition'		: 'inside',
         	'openEffect'		: 'elastic',
 			'closeEffect'		: 'elastic',
 			'type'				: 'iframe',
@@ -133,12 +127,10 @@ jQuery(document).ready(function ($) {
 		$("#fancybox-content").css({
 				"background-color" : "#FFFFFF"
 		});
-/*
 		$("body").on('click', 'a.pop-up-video', function(event) {
 			$( "div#fancybox-title" ).css( "margin-left", "0" );
 			$( "div#fancybox-title" ).css( "margin-right", "0" );
 		});
-*/
 	}
 	//-- dynamically updates the width and height attributes of the limelight player
 	$(window).on('resize', _.throttle(function (e) {
