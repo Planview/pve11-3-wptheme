@@ -50,6 +50,11 @@ body.home.not-logged-in {
   background-color: #eee;
 }
 
+.home.not-logged-in .jumbotron p {
+  font-size: 20px;
+  color: $brand-default !important;
+}
+
 .jumbotron {
   background-color: $brand-default;
 }
@@ -61,8 +66,8 @@ body.home.not-logged-in {
 .pve-logo.logo-lg {
   @include text-hide();
   display: inline-block;
-  height: 147px;
-  width: 0.625 * 1012px;
+  height: 48px;
+  width: 0.625 * 323px;
   vertical-align: text-top;
   max-width: 100%;
   background: {
@@ -72,8 +77,8 @@ body.home.not-logged-in {
     position: center center;
   }
   @media screen and (min-width: $screen-sm-min) {
-    height: 147px;
-    width: 1012px;
+    height: 47px;
+    width: 323px;
     margin: {
       top: 5px;
     }
