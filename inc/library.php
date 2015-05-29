@@ -23,8 +23,8 @@ function pve_113_resource_post_link( $permalink, $post ) {
         case 'slideshare':
 	case 'video':
 	    return get_field( 'pv_event_resource_video_code', $post->ID );
-        case 'link':
-            return trim( get_field( 'pv_event_resource_url', $post->ID ) );
+	case 'link':
+		return trim( get_field( 'pv_event_resource_url', $post->ID ) );
     }
     return $permalink;
 }
