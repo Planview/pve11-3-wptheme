@@ -59,6 +59,18 @@ body.home.not-logged-in {
   background-color: $brand-default;
 }
 
+.projectplace .jumbotron {
+  background-color: $brand-warning;
+}
+
+.enterprise .jumbotron {
+  background-color: $brand-primary;
+}
+
+.troux .jumbotron {
+  background-color: $brand-troux;
+}
+
 .home .jumbotron {
   background-color: $white;
 }
