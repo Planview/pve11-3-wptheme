@@ -1,11 +1,13 @@
 .entry-content a { border-bottom: dotted 1px $gray; }
-.entry-content a:hover { border-bottom: none; }
+.entry-content a:hover { border-bottom: none !important; }
 
-.projectplace .entry-content a { color: $brand-info; border-bottom: dotted 1px $brand-info; }
+.product-projectplace .entry-content a { color: $brand-warning; border-bottom: dotted 1px $brand-warning; }
 
-.enterprise .entry-content a { color: $brand-primary; border-bottom: dotted 1px $brand-primary; }
+.product-planview-enterprise .entry-content a { color: $brand-primary; border-bottom: dotted 1px $brand-primary; }
 
-.troux .entry-content a { color: $brand-troux; border-bottom: dotted 1px $brand-troux; }
+.product-troux .entry-content a { color: $brand-troux; border-bottom: dotted 1px $brand-troux; }
+
+.entry-content a.btn { color: #fff;}
 
 .caret { display:none; }
 
@@ -87,50 +89,6 @@ body {
 
 #survey {
     display: none;
-    /*@media screen and (min-width: 783px) {
-        display: block;
-        position: fixed;
-        right: 30px;
-        background-color: $brand-danger;
-        border-radius: 4px;
-        color: #fff;
-        padding: 10px 15px;
-        top: 30px;*/
-        // border: 1px solid #fff;
-        /*z-index: 1000;
-        * { display: inline-block; }*/
-        // border-color: rgba(255,255,255,0.6);
-        /*&.headroom {
-            transition: all .3s ease-in-out;
-        }
-        &.headroom--unpinned {
-            opacity: 1;
-        }
-        &.headroom--pinned, &.headroom--top {*/
-            // top: -100px;
-            /*opacity: 0;
-        }
-        .admin-bar & {
-            top: 62px;
-        }
-        .survey-text {
-            width: 0;
-            margin-left: -1px;
-            white-space: nowrap;
-            // display: none;
-            overflow: hidden;
-            line-height: 1;
-            vertical-align: text-bottom;
-        }
-        &:hover, &:active, &:focus {
-            color:#fff;
-            text-decoration: none;
-            background-color: #ca3f3f;
-        }
-        .lt-ie10 & {
-            display: none !important;
-        }
-    }*/
 }
 
 .navbar-brand {
