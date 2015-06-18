@@ -20,6 +20,16 @@ function pve_113_page_menu_args( $args ) {
 add_filter( 'wp_page_menu_args', 'pve_113_page_menu_args' );
 
 /**
+ * Adds "product" taxonomy to pages.
+ *
+ */
+function register_product_for_pages() {
+      register_taxonomy_for_object_type('product', 'page');
+      add_post_type_support('page', 'product');
+}
+add_action('admin_init', 'register_product_for_pages');
+
+/**
  * Adds custom classes to the array of body classes.
  *
  * @param array $classes Classes for the body element.
@@ -31,9 +41,18 @@ function pve_113_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
+	global $wp_query;
+    
+    if ( $terms = get_the_terms( $wp_query->post->ID, 'product' ) ) {
+        foreach ( $terms as $term ) {
+	    	$classes[] = 'product-'.$term->slug;
+        }
+    }
+
 	return $classes;
 }
 add_filter( 'body_class', 'pve_113_body_classes' );
+
 
 /**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
@@ -242,3 +261,10 @@ function pve_113_featured_image( $size, $classes, $echoImg = true ) {
         return $image;
     }
 }
+
+/*
+function pve_113_wpquery_view($query) {
+    var_dump($query);
+}
+add_action('pre_get_posts', 'pve_113_wpquery_view', 1, 200);
+*/
