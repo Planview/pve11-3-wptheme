@@ -76,13 +76,18 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="col-sm-3">
+                    <aside class="demo-callout">
+                        <a href="http://pvelaunch.staging.wpengine.com/library/#tab-pve-11-4" class="btn btn-primary btn-block btn-lg" target="_blank">
+                            View Demo
+                        </a>
+                    </aside>
                     <aside class="resource-list">
                         <h3 class="section-title">Resources</h3>
                         <?php pve_113_resource_list( get_field( 'pv_event_presentation_resources' ) ); ?>
                     </aside>
                     <aside class="survey-callout">
                         <h3 class="section-title">Survey</h3>
-                        <a href="http://www.surveygizmo.com/s3/1955258/2015-Planview-Enterprise-11-3-Product-Launch-Event" class="btn btn-default btn-block btn-lg" target="_blank">
+                        <a href="http://www.surveygizmo.com/s3/2192901/189d7eeb4531" class="btn btn-default btn-block btn-lg" target="_blank">
                             Take the Survey
                         </a>
                     </aside>
