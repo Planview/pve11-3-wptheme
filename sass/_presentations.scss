@@ -65,16 +65,6 @@
     .video {
         background-color: #e0e0e0;
     }
-    // .qa-form {
-    //     margin-top: 15px;
-    // }
-    // .qa-confirm {
-    //     color: #fff;
-    // }
-    .comment-title, .section-title {
-        //border-bottom-color: #67873a;
-        //color: #67873a;
-    }
 }
 
 .post-type-archive-topics .content-area {
@@ -87,3 +77,7 @@
 .panel-topics {
     @include panel-variant(#ddd, $white, #67873a, #ddd);
 }
+
+.comments-title {
+        margin-top: 0 !important;
+    }
