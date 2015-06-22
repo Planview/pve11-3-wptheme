@@ -189,14 +189,19 @@ body.home.not-logged-in {
     }
 }
 
-.home-callout h3 a {
+.home-callout h3 a, .product-services h3 a {
   text-decoration: none;
   font-weight: normal;
   margin-bottom: 35px;
+  border-bottom: none;
 }
 
-.home-callout h3 img {
+.home-callout h3 img, .product-services h3 img {
   padding-bottom: 15px;
+}
+
+.product-services h3 {
+  text-align: center;
 }
 
 .home-callout h4 {
