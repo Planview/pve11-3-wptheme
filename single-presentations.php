@@ -77,8 +77,11 @@ get_header(); ?>
                 </div>
                 <div class="col-sm-3">
                     <aside class="demo-callout">
-                        <a href="http://pvelaunch.staging.wpengine.com/library/#tab-pve-11-4" class="btn btn-primary btn-block btn-lg" target="_blank">
-                            View Demo
+                        <a href="http://pvelaunch.staging.wpengine.com/library/#tab-pve-11-4" class="btn btn-primary btn-enterprise btn-block btn-lg" target="_blank">
+                            View Planview Enterprise Demo
+                        </a>
+                        <a href="http://pvelaunch.staging.wpengine.com/library/#tab-pve-11-4" class="btn btn-primary btn-projectplace btn-block btn-lg" target="_blank">
+                            View Projectplace Demo
                         </a>
                     </aside>
                     <aside class="resource-list">
