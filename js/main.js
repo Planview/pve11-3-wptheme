@@ -92,6 +92,7 @@ jQuery(document).ready(function ($) {
 			'height'			: '100%', //321 = actual limelight player height
         	'maxWidth'			: 800,
 			'maxHeight'			: 600,
+        	'titleShow'			: false,
 			'titleShow'			: true,
 			'titlePosition'		: 'inside',
         	'openEffect'		: 'elastic',
@@ -113,6 +114,7 @@ jQuery(document).ready(function ($) {
 			'autoplay'     		: true,
 			'autoScale'     	: true,
         	'href'				: this.href,
+			'titleShow'			: false,
 			'titleShow'			: true,
 			'titlePosition'		: 'inside',
         	'openEffect'		: 'elastic',
@@ -220,5 +222,10 @@ jQuery(document).ready(function ($) {
 	if (hashURL.substring(0,5) == '#tab-') {
 		$('nav.resources-tabs a[href="#' + hashURL.substring(5) + '"]').trigger('click');
 	}
+
+	// open the top-nav survey link in a new window
+	$('li#menu-item-579 a').click(function() {
+		$(this).attr('target', '_blank');
+	});
 
 });
