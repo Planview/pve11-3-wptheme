@@ -223,9 +223,4 @@ jQuery(document).ready(function ($) {
 		$('nav.resources-tabs a[href="#' + hashURL.substring(5) + '"]').trigger('click');
 	}
 
-	// open the top-nav survey link in a new window
-	$('li#menu-item-579 a').click(function() {
-		$(this).attr('target', '_blank');
-	});
-
 });
