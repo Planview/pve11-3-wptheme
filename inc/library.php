@@ -64,7 +64,7 @@ add_action('pre_get_posts', 'pve_113_library_pre_get_posts');
 /**
  * A function to re-sort the library
  */
-function pve_113_library_sort() {
+function pve_113_library_sort($term_id = '') {
     $sorted_list = array();
 
     if ( have_posts() ) {
@@ -76,18 +76,38 @@ function pve_113_library_sort() {
             if ( ! $release ) continue;
 
             $release = reset($release);
+/*
+            if ( isset( $release->parent ) ) {
+                $parent_term = get_term($release->parent, 'release');
+                $sorted_list[$parent_term->name] = array();
+                if ( ! isset( $sorted_list[$parent_term->name][$release->name] ) ) {
+                    $sorted_list[$parent_term->name][$release->name] = array();
+                    $sorted_list[$parent_term->name][$release->name]['__object'] = $release;
+                }
 
-            if ( ! isset( $sorted_list[$release->name] ) ) {
-                $sorted_list[$release->name] = array();
-                $sorted_list[$release->name]['__object'] = $release;
-            }
+                if ( get_field( 'pv_event_resource_featured' ) &&
+                        ! isset( $sorted_list[$release->name]['__featured'] ) ) {
+                    $sorted_list[$parent_term->name][$release->name]['__featured'] = $GLOBALS['post'];
+                } else {
+                    $sorted_list[$parent_term->name][$release->name][] = $GLOBALS['post'];
+                }
 
-            if ( get_field( 'pv_event_resource_featured' ) &&
-                    ! isset( $sorted_list[$release->name]['__featured'] ) ) {
-                $sorted_list[$release->name]['__featured'] = $GLOBALS['post'];
             } else {
-                $sorted_list[$release->name][] = $GLOBALS['post'];
+*/
+                if ( ! isset( $sorted_list[$release->name] ) ) {
+                    $sorted_list[$release->name] = array();
+                    $sorted_list[$release->name]['__object'] = $release;
+                }
+
+                if ( get_field( 'pv_event_resource_featured' ) &&
+                        ! isset( $sorted_list[$release->name]['__featured'] ) ) {
+                    $sorted_list[$release->name]['__featured'] = $GLOBALS['post'];
+                } else {
+                    $sorted_list[$release->name][] = $GLOBALS['post'];
+                }
+/*
             }
+*/
         }
     }
 
@@ -98,6 +118,10 @@ function pve_113_library_sort() {
             "{$b['__object']->taxonomy}_{$b['__object']->term_id}" );
         return $a_val - $b_val;
     } );
+
+    echo "<pre>";
+    print_r($sorted_list);
+    echo "</pre>";
 
     return $sorted_list;
 }
