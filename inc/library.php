@@ -61,10 +61,26 @@ function pve_113_library_pre_get_posts( $query ) {
 }
 add_action('pre_get_posts', 'pve_113_library_pre_get_posts');
 
+
+/**
+ * A function to compare values for uasort
+ */
+function compare_multi($a, $b) {
+    // sort by parent taxonomy sort order
+    //$retval = strnatcmp($a->parent_name, $b->parent_name);
+    $retval = $a->parent_sort_order - $b->parent_sort_order;
+    // if parent order is same, sort by release sort order
+    if ($retval == 0) {
+        $retval = $a->sort_order - $b->sort_order;
+    }
+    return $retval;
+}
+
+
 /**
  * A function to re-sort the library
  */
-function pve_113_library_sort($term_id = '') {
+function pve_113_library_sort() {
     $sorted_list = array();
 
     if ( have_posts() ) {
@@ -76,52 +92,49 @@ function pve_113_library_sort($term_id = '') {
             if ( ! $release ) continue;
 
             $release = reset($release);
-/*
-            if ( isset( $release->parent ) ) {
+
+            $release->sort_order = get_field( 'pve_113_library_sort_order', "{$release->taxonomy}_{$release->term_id}" );
+
+            if ( isset( $release->parent) && '' != $release->parent ) {
                 $parent_term = get_term($release->parent, 'release');
-                $sorted_list[$parent_term->name] = array();
-                if ( ! isset( $sorted_list[$parent_term->name][$release->name] ) ) {
-                    $sorted_list[$parent_term->name][$release->name] = array();
-                    $sorted_list[$parent_term->name][$release->name]['__object'] = $release;
-                }
-
-                if ( get_field( 'pv_event_resource_featured' ) &&
-                        ! isset( $sorted_list[$release->name]['__featured'] ) ) {
-                    $sorted_list[$parent_term->name][$release->name]['__featured'] = $GLOBALS['post'];
-                } else {
-                    $sorted_list[$parent_term->name][$release->name][] = $GLOBALS['post'];
-                }
-
+                $release->parent_name = $parent_term->name;
+                $release->parent_sort_order = get_field( 'pve_113_library_sort_order', "{$parent_term->taxonomy}_{$parent_term->term_id}" );
             } else {
-*/
-                if ( ! isset( $sorted_list[$release->name] ) ) {
-                    $sorted_list[$release->name] = array();
-                    $sorted_list[$release->name]['__object'] = $release;
-                }
-
-                if ( get_field( 'pv_event_resource_featured' ) &&
-                        ! isset( $sorted_list[$release->name]['__featured'] ) ) {
-                    $sorted_list[$release->name]['__featured'] = $GLOBALS['post'];
-                } else {
-                    $sorted_list[$release->name][] = $GLOBALS['post'];
-                }
-/*
+                $release->parent_name = $release->name;
+                $release->parent_sort_order = $release->sort_order;
             }
-*/
+
+            if ( ! isset( $sorted_list[$release->parent_name] ) ) {
+                $sorted_list[$release->parent_name] = array();
+                if ( ! isset( $sorted_list[$release->parent_name][$release->name] ) ) {
+                    $sorted_list[$release->parent_name][$release->name] = array();
+                    $sorted_list[$release->parent_name][$release->name]['__object'] = $release;
+                }
+            }
+
+            if ( get_field( 'pv_event_resource_featured' ) &&
+                    ! isset( $sorted_list[$release->parent_name][$release->name]['__featured'] ) ) {
+                $sorted_list[$release->parent_name][$release->name]['__featured'] = $GLOBALS['post'];
+            } else {
+                $sorted_list[$release->parent_name][$release->name][] = $GLOBALS['post'];
+            }
+
         }
     }
-
+/*
     uasort( $sorted_list, function ($a, $b) {
-        $a_val = get_field( 'pve_113_library_sort_order',
-            "{$a['__object']->taxonomy}_{$a['__object']->term_id}" );
-        $b_val = get_field( 'pve_113_library_sort_order',
-            "{$b['__object']->taxonomy}_{$b['__object']->term_id}" );
+        $a_val = get_field( 'pve_113_library_sort_order', "{$a['__object']->taxonomy}_{$a['__object']->term_id}" );
+        $b_val = get_field( 'pve_113_library_sort_order', "{$b['__object']->taxonomy}_{$b['__object']->term_id}" );
+        echo $a_val . ' --- '
         return $a_val - $b_val;
     } );
+*/
+    uasort( $sorted_list, 'compare_multi' );
 
     echo "<pre>";
     print_r($sorted_list);
     echo "</pre>";
+    die();
 
     return $sorted_list;
 }

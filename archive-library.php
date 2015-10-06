@@ -21,6 +21,11 @@ get_header(); ?>
         </div>
     </div>
     <?php if ( have_posts() ) : $sorted_posts = pve_113_library_sort(); $activeSet = false; ?>
+<?php
+    echo "<pre>";
+    print_r($sorted_list);
+    echo "</pre>";
+?>
         <nav class="resources-tabs">
             <div class="container">
                 <ul class="nav nav-pills nav-justified">

@@ -25,7 +25,7 @@ if ( have_posts() ) :
         <?php if ( get_field( '113_front_reg_modal_content' ) ) {
             pve_113_modal(
                 'registration',
-                __('Register for the Event', 'pve_113'),
+                __('Register for Access', 'pve_113'),
                 get_field( '113_front_reg_modal_content' )
             );
         } ?>
