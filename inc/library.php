@@ -68,11 +68,11 @@ add_action('pre_get_posts', 'pve_113_library_pre_get_posts');
 function compare_multi($a, $b) {
     // sort by parent taxonomy sort order
     //$retval = strnatcmp($a->parent_name, $b->parent_name);
-    $retval = $a->parent_sort_order - $b->parent_sort_order;
+//    $retval = $a->parent_sort_order - $b->parent_sort_order;
     // if parent order is same, sort by release sort order
-    if ($retval == 0) {
+//    if ($retval == 0) {
         $retval = $a->sort_order - $b->sort_order;
-    }
+//    }
     return $retval;
 }
 
@@ -95,28 +95,26 @@ function pve_113_library_sort() {
 
             $release->sort_order = get_field( 'pve_113_library_sort_order', "{$release->taxonomy}_{$release->term_id}" );
 
-            if ( isset( $release->parent) && '' != $release->parent ) {
+            if ( isset( $release->parent) && $release->parent != 0 ) {
                 $parent_term = get_term($release->parent, 'release');
                 $release->parent_name = $parent_term->name;
                 $release->parent_sort_order = get_field( 'pve_113_library_sort_order', "{$parent_term->taxonomy}_{$parent_term->term_id}" );
             } else {
+                $parent_term = '';
                 $release->parent_name = $release->name;
                 $release->parent_sort_order = $release->sort_order;
             }
 
-            if ( ! isset( $sorted_list[$release->parent_name] ) ) {
-                $sorted_list[$release->parent_name] = array();
-                if ( ! isset( $sorted_list[$release->parent_name][$release->name] ) ) {
-                    $sorted_list[$release->parent_name][$release->name] = array();
-                    $sorted_list[$release->parent_name][$release->name]['__object'] = $release;
+                if ( ! isset( $sorted_list[$release->name] ) ) {
+                    $sorted_list[$release->name] = array();
+                    $sorted_list[$release->name]['__object'] = $release;
                 }
-            }
 
             if ( get_field( 'pv_event_resource_featured' ) &&
-                    ! isset( $sorted_list[$release->parent_name][$release->name]['__featured'] ) ) {
-                $sorted_list[$release->parent_name][$release->name]['__featured'] = $GLOBALS['post'];
+                    ! isset( $sorted_list[$release->name]['__featured'] ) ) {
+                $sorted_list[$release->name]['__featured'] = $GLOBALS['post'];
             } else {
-                $sorted_list[$release->parent_name][$release->name][] = $GLOBALS['post'];
+                $sorted_list[$release->name][] = $GLOBALS['post'];
             }
 
         }
