@@ -20,13 +20,36 @@ get_header(); ?>
             <?php echo get_field( 'pv_event_resources_archive_intro', 'option' ) ?: ''; ?>
         </div>
     </div>
-    <?php if ( have_posts() ) : $sorted_posts = pve_113_library_sort(); $activeSet = false; ?>
+    <?php if ( have_posts() ) : $sorted_posts = pve_113_library_sort_by_product(); $activeParentSet = false; $activeReleaseSet = false; ?>
         <nav class="resources-tabs">
             <div class="container">
                 <ul class="nav nav-pills nav-justified">
-                    <?php foreach ($sorted_posts as $release => $release_posts) : ?>
-                        <li<?php echo $activeSet ? '' : ' class="active"'; $activeSet = true; ?>><a href="#<?php echo $release_posts['__object']->slug; ?>" role="tab" data-toggle="tab"><?php echo $release ?></a></li>
-                    <?php endforeach; ?>
+                    <?php $parentID = 0;?>
+                    <?php foreach ( $sorted_posts as $release => $release_posts ) : ?>
+                        <?php
+                            if ( $release_posts['__object']->parent != $parentID ) {
+                                if ( $parentID != 0 ) {
+                                    // if we've already set parentID, so close it
+                                    echo '</ul></li>';
+                                } else {
+                        ?>
+                        <li<?php echo $activeProductSet ? ' class="dropdown"' : ' class="active dropdown"'; $activeProductSet = true; ?>><a class="dropdown-toggle" href="#" role="tab" data-toggle="dropdown"><?php echo $release_posts['__object']->parent_name; ?> <span class="caret"></span></a><ul class="dropdown-menu" role="menu">
+                        <?php
+                                }
+                            }
+                        ?>
+                        <li<?php echo $activeReleaseSet ? '' : ' class="active"'; $activeReleaseSet = true; ?>><a href="#<?php echo $release_posts['__object']->slug; ?>" data-toggle="tab"><?php echo $release; ?></a></li>
+                        <?php
+
+                            $parentID = $release_posts['__object']->parent;
+
+                        endforeach; 
+
+                        if ( $parentID != 0 ) { 
+                            $parentID = 0;
+                            echo '</ul></li>';
+                        }
+                    ?>
                 </ul>
             </div>
         </nav>
@@ -34,7 +57,7 @@ get_header(); ?>
     <div id="primary" class="content-area">
         <main id="main" class="site-main" role="main">
 
-            <?php if ( have_posts() ) : $sorted_posts = pve_113_library_sort(); $activeSet = false; // var_dump($sorted_posts) ?>
+            <?php if ( have_posts() ) : $sorted_posts = pve_113_library_sort_by_product(); $activeSet = false; // var_dump($sorted_posts) ?>
                 <div class="tab-content">
                 <?php foreach ($sorted_posts as $release => $release_posts) : ?>
                     <div class="release tab-pane<?php echo $activeSet ? '' : ' active'; $activeSet = true; ?>" id="<?php echo $release_posts['__object']->slug; ?>">
