@@ -132,3 +132,25 @@ body {
 .jumbotron h1 {
     font-size: 45px !important;
   }
+
+.resources-tabs li a {
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        font-size: 16px !important;
+    }
+}
+.resources-tabs .dropdown-menu > a,
+.resources-tabs li ul li > a {
+    background: #fff;
+    color: #555;
+    text-align: center;
+}
+
+.resources-tabs .dropdown-menu > .active > a {
+    background: #777;
+    color: #fff;
+    text-align: center;
+}
+
+.post-type-archive-library .nav > .open > a {
+    color: #333;
+}
