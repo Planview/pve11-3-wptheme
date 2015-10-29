@@ -112,7 +112,7 @@ function pve_113_scripts() {
     } else {
         wp_register_style( 'avenir', pve_113_settings('font-url') );
         wp_enqueue_style( 'pve_113-style', get_stylesheet_directory_uri() .
-            '/css/style.css', array('avenir'), '1.0.1' );
+            '/css/style.css?v=11_5', array('avenir'), '1.0.1' );
     }
 
     wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() .

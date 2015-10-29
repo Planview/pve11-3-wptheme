@@ -15,6 +15,41 @@
         background-color: $brand-default;
         color: $white;
     }
+    #tabid-pve-11-5,
+    #tabid-troux,
+    #tabid-projectplace,
+    #tabid-services {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    @media (min-width: 768px) {
+        .nav-justified>li {
+            vertical-align: middle;
+        }
+    }
+    @media only screen and (max-width: 1199px) {
+        #tabid-pve-11-5 {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
+    @media only screen and (max-width: 991px) {
+        #tabid-troux,
+        #tabid-projectplace,
+        #tabid-services {
+            padding-top: 18px;
+            padding-bottom: 17px;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        #tabid-pve-11-5,
+        #tabid-troux,
+        #tabid-projectplace,
+        #tabid-services {
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
 }
 
 .featured-resource {

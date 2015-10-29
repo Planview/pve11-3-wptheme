@@ -18,18 +18,8 @@ if ( have_posts() ) :
                     <?php the_field('113_front_auth_jumbotron_content'); ?>
                 </div>
             </div>
-        <?php else: ?>
-            <div class="page-header">
-                <h1>
-                    <?php the_title(); ?>
-                </h1>
-            </div>
         <?php endif; ?>
-        <div class="image-banner bg-size" data-stellar-background-ratio="0.5">
-            <div class="container">
-                <?php the_content(); ?>
-            </div>
-        </div>
+        <?php the_content(); ?>
     <?php endwhile;
 endif;
 

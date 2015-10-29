@@ -33,19 +33,19 @@ get_header(); ?>
                                     echo '</ul></li>';
                                 } else {
                         ?>
-                        <li<?php echo $activeProductSet ? ' class="dropdown"' : ' class="active dropdown"'; $activeProductSet = true; ?>><a class="dropdown-toggle" href="#" role="tab" data-toggle="dropdown"><?php echo $release_posts['__object']->parent_name; ?> <span class="caret" style="display: inline-block;"></span></a><ul class="dropdown-menu" role="menu">
+                        <li<?php echo $activeProductSet ? ' class="dropdown"' : ' class="active dropdown"'; $activeProductSet = true; ?>><a id="tabid-<?php echo $release_posts['__object']->slug; ?>" class="dropdown-toggle" href="#" role="tab" data-toggle="dropdown"><?php echo $release_posts['__object']->parent_name; ?> <span class="caret" style="display: inline-block;"></span></a><ul class="dropdown-menu" role="menu">
                         <?php
                                 }
                             }
                         ?>
-                        <li<?php echo $activeReleaseSet ? '' : ' class="active"'; $activeReleaseSet = true; ?>><a href="#<?php echo $release_posts['__object']->slug; ?>" data-toggle="tab"><?php echo $release; ?></a></li>
+                        <li<?php echo $activeReleaseSet ? '' : ' class="active"'; $activeReleaseSet = true; ?>><a id="tabid-<?php echo $release_posts['__object']->slug; ?>" href="#<?php echo $release_posts['__object']->slug; ?>" data-toggle="tab"><?php echo $release; ?></a></li>
                         <?php
 
                             $parentID = $release_posts['__object']->parent;
 
-                        endforeach; 
+                        endforeach;
 
-                        if ( $parentID != 0 ) { 
+                        if ( $parentID != 0 ) {
                             $parentID = 0;
                             echo '</ul></li>';
                         }
