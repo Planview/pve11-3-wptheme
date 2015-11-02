@@ -81,3 +81,18 @@
 .comments-title {
         margin-top: 0 !important;
 }
+
+/* Planview demo button */
+/* See Bootstrap > btn-primary */
+
+/* Troux demo button */
+.btn-troux{color:#fff;background-color:#80bcbb;border-color:#509696}
+.btn-troux:focus,.btn-troux.focus{color:#fff;background-color:#509696;border-color:#307d7d}
+.btn-troux:hover{color:#fff;background-color:#509696;border-color:#307d7d}
+.btn-troux:active,.btn-troux.active,.open>.btn-troux.dropdown-toggle{color:#fff;background-color:#509696;border-color:#307d7d}
+.btn-troux:active:hover,.btn-troux:active:focus,.btn-troux:active.focus,.btn-troux.active:hover,.btn-troux.active:focus,.btn-troux.active.focus,.open>.btn-troux.dropdown-toggle:hover,.open>.btn-troux.dropdown-toggle:focus,.open>.btn-troux.dropdown-toggle.focus{color:#fff;background-color:#307d7d;border-color:#509696}
+.btn-troux:active,.btn-troux.active,.open>.btn-troux.dropdown-toggle{background-image:none}
+.btn-troux.disabled,.btn-troux.disabled:hover,.btn-troux.disabled:focus,.btn-troux.disabled.focus,.btn-troux.disabled:active,.btn-troux.disabled.active,.btn-troux[disabled],.btn-troux[disabled]:hover,.btn-troux[disabled]:focus,.btn-troux[disabled].focus,.btn-troux[disabled]:active,.btn-troux[disabled].active,fieldset[disabled] .btn-troux,fieldset[disabled] .btn-troux:hover,fieldset[disabled] .btn-troux:focus,fieldset[disabled] .btn-troux.focus,fieldset[disabled] .btn-troux:active,fieldset[disabled] .btn-troux.active{background-color:#b4dddd;border-color:#509696}.btn-troux .badge{color:#80bcbb;background-color:#fff}
+
+/* Projectplace demo button */
+/* See Bootstrap > btn-warning */

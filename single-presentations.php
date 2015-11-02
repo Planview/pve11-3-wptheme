@@ -80,6 +80,9 @@ get_header(); ?>
                         <a href="/library/#tab-pve-11-4" class="btn btn-primary btn-block btn-lg" target="_blank">
                             Planview Enterprise Demo
                         </a>
+                        <a href="/library/#tab-troux" class="btn btn-troux btn-block btn-lg" target="_blank">
+                            Troux Demo
+                        </a>
                         <a href="/library/#tab-projectplace" class="btn btn-warning btn-block btn-lg" target="_blank">
                             Projectplace Demo
                         </a>
@@ -90,7 +93,7 @@ get_header(); ?>
                     </aside>
                     <aside class="survey-callout">
                         <h3 class="section-title">Survey</h3>
-                        <a href="http://www.surveygizmo.com/s3/2192901/189d7eeb4531" class="btn btn-default btn-block btn-lg" target="_blank">
+                        <a href="http://www.surveygizmo.com/s3/2359859/2015-Planview-Products-Central" class="btn btn-default btn-block btn-lg" target="_blank">
                             Take the Survey
                         </a>
                     </aside>

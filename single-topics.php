@@ -114,6 +114,17 @@ get_header(); ?>
                     <?php endif; ?>
                 </div>
                 <div class="col-sm-3">
+                    <aside class="demo-callout">
+                        <a href="/library/#tab-pve-11-4" class="btn btn-primary btn-planview btn-block btn-lg" target="_blank">
+                            Planview Enterprise Demo
+                        </a>
+                        <a href="/library/#tab-troux" class="btn btn-troux btn-block btn-lg" target="_blank">
+                            Troux Demo
+                        </a>
+                        <a href="/library/#tab-projectplace" class="btn btn-warning btn-projectplace btn-block btn-lg" target="_blank">
+                            Projectplace Demo
+                        </a>
+                    </aside>
                     <aside class="resource-list">
                         <h3 class="section-title">Resources</h3>
                         <?php pve_113_resource_list( get_field( 'pv_event_presentation_resources' ) ); ?>
