@@ -2,11 +2,14 @@
     <div class="row">
 
         <div class="col-md-4 pull-right">
-            <a class="pop-up-iframe" title="New Release of Planview Enterprise 11.5" href="//www.youtube.com/embed/F2PACxoqtIM?rel=0"><img src="/wp-content/uploads/2015/06/planview-enterprise-video-whats-new-3502.png" alt="New Release of Planview Enterprise 11.5" width="350" height="197" /></a>
+            <a class="pop-up-iframe" title="New Release of Planview Enterprise 11.5" href="//www.youtube.com/embed/F2PACxoqtIM?rel=0"><img src="/wp-content/uploads/2015/06/planview-enterprise-video-whats-new-3502.png" alt="New Release of Planview Enterprise 11.5" width="350" height="197" />
+            </a>
         </div>
 
         <div class="col-md-8">
-            Building on the strengths of what helps you make proactive portfolio decisions, Planview Enterprise 11.5 introduces the next generation Ribbon by bringing analytics front and center. It introduces a new data visualization platform which extends across a Planview product lines through Microsoft’s Power BI, it adds a new dimension to portfolio management to support business capabilities, and much more. Planview Enterprise<sup>&reg;</sup> 11.5 delivers:
+            Building on the strengths of what helps you make proactive portfolio decisions, Planview Enterprise 11.5 introduces the next generation Ribbon by bringing analytics front and center. It introduces a new data visualization platform which extends across a Planview product lines through Microsoft’s Power BI, it adds a new dimension to portfolio management to support business capabilities, and much more.
+
+            Planview Enterprise<sup>&reg;</sup> 11.5 delivers:
             <ul>
                 <li>Next generation ribbon and tiles integrates Analytics and Reporting for line-of-sight portfolio analysis, RPM Analytics, and custom reports</li>
                 <li>New data visualization with Microsoft Power BI</li>
@@ -18,7 +21,7 @@
             </ul>
         </div>
         <div class="col-md-12 text-center">
-            <a href="/wp-content/uploads/2015/06/Planview-Whats-New-Planview-Enterprise-11-4.pdf" target="_blank" class="btn btn-lg btn-primary" style="margin-top: 1em;"><span class="fa fa-file-pdf-o"></span> Get the <span class="sr-only">What's New in Planview Enterprise 11.4</span> solution brief</a>
+            <a href="/wp-content/uploads/2015/10/Planview-Whats-New-Planview-Enterprise-11-5.pdf" target="_blank" class="btn btn-lg btn-primary" style="margin-top: 1em;"><span class="fa fa-file-pdf-o"></span> Get the <span class="sr-only">What's New in Planview Enterprise 11.4</span> solution brief</a>
         </div>
     </div>
     <hr />
@@ -28,9 +31,11 @@
         </div>
 
         <div class="col-md-3 pull-right">
-            <a class="fancybox" title="Reports Now Available as Tiles" href="/wp-content/uploads/2015/10/pve-11-5-next-gen-ribbon.png"><img alt="Reports Now Available as Tiles" src="/wp-content/uploads/2015/10/pve-11-5-next-gen-ribbon-300x272.png" alt="pve-11-5-next-gen-ribbon" width="260" class="alignnone size-medium wp-image-768" style="margin-bottom:2em;" /></a>
+            <a class="fancybox" title="Reports Now Available as Tiles" href="/wp-content/uploads/2015/10/pve-11-5-next-gen-ribbon.png"><img alt="Reports Now Available as Tiles" src="/wp-content/uploads/2015/10/pve-11-5-next-gen-ribbon-300x272.png" alt="pve-11-5-next-gen-ribbon" width="260" class="alignnone size-medium" style="margin-bottom:2em;" />
+            </a>
 
-            <a class="fancybox" title="Enhanced RPM Analytics Embedded into the Ribbon" href="/wp-content/uploads/2015/10/pve-11-5-uplifted-rpm-analytcs-reports.png"><img src="/wp-content/uploads/2015/10/pve-11-5-uplifted-rpm-analytcs-reports-300x265.png" alt="Enhanced RPM Analytics Embedded into the Ribbon" width="260" class="alignnone size-medium wp-image-777" /></a>
+            <a class="fancybox" title="Enhanced RPM Analytics Embedded into the Ribbon" href="/wp-content/uploads/2015/10/pve-11-5-uplifted-rpm-analytcs-reports.png"><img src="/wp-content/uploads/2015/10/pve-11-5-uplifted-rpm-analytcs-reports-300x265.png" alt="Enhanced RPM Analytics Embedded into the Ribbon" width="260" class="alignnone size-medium" />
+            </a>
         </div>
 
         <div class="col-md-9">
@@ -41,7 +46,7 @@
             <h3>Streamline Report Configuration and Distribution</h3> With reports now in the ribbon, sharing and administration becomes much simpler. Using the existing, flexible Planview Enterprise ribbon and tiles configuration capabilities, administrators can share reports with default layouts and control access with security features. Making this easier, Planview Enterprise 11.5 also allows administrators to represent how custom features are used by renaming them. (See Additional Enhancements - Renaming user security features for more information).
         </div>
         <div class="col-md-12 text-center">
-            <a href="/pv/planview-enterprise/" class="btn btn-lg btn-primary" style="margin-top: 1em;">Learn more<span class="sr-only"> about Extending the Power of the Ribbon to Include Reporting</span></a>
+            <a href="/pv/planview-enterprise/analytics-and-reporting/" class="btn btn-lg btn-primary" style="margin-top: 1em;">Learn more<span class="sr-only"> about Extending the Power of the Ribbon to Include Reporting</span></a>
         </div>
     </div>
     <hr />
@@ -51,7 +56,8 @@
         </div>
 
         <div class="col-md-3 pull-right">
-            <a class="fancybox" title="New Data Visualization with Microsoft Power BI" href="/wp-content/uploads/2015/10/pve-11-5-power-bi.png"><img src="/wp-content/uploads/2015/10/pve-11-5-power-bi-300x190.png" alt="New Data Visualization with Microsoft Power BI" width="260" class="alignnone size-medium wp-image-769" /></a>
+            <a class="fancybox" title="New Data Visualization with Microsoft Power BI" href="/wp-content/uploads/2015/10/pve-11-5-power-bi.png"><img src="/wp-content/uploads/2015/10/pve-11-5-power-bi-300x190.png" alt="New Data Visualization with Microsoft Power BI" width="260" class="alignnone size-medium" />
+            </a>
         </div>
 
         <div class="col-md-9">
@@ -67,7 +73,7 @@
             </ul>
         </div>
         <div class="col-md-12 text-center">
-            <a href="/pv/planview-enterprise/" class="btn btn-lg btn-primary" style="margin-top: 1em;">Learn more<span class="sr-only"> about New Data Visualization with Microsoft Power BI</span></a>
+            <a href="/pv/planview-enterprise/analytics-and-reporting/" class="btn btn-lg btn-primary" style="margin-top: 1em;">Learn more<span class="sr-only"> about New Data Visualization with Microsoft Power BI</span></a>
         </div>
     </div>
     <hr />
@@ -77,7 +83,8 @@
         </div>
 
         <div class="col-md-3 pull-right">
-            <a class="fancybox" title="New Business Capability Dimension for PPM" href="/wp-content/uploads/2015/10/pve-11-5-group-by-capabilities.png"><img src="/wp-content/uploads/2015/10/pve-11-5-group-by-capabilities-300x165.png" alt="New Business Capability Dimension for PPM" width="260" class="alignnone size-medium wp-image-767" /></a>
+            <a class="fancybox" title="New Business Capability Dimension for PPM" href="/wp-content/uploads/2015/10/pve-11-5-group-by-capabilities.png"><img src="/wp-content/uploads/2015/10/pve-11-5-group-by-capabilities-300x165.png" alt="New Business Capability Dimension for PPM" width="260" class="alignnone size-medium" />
+            </a>
         </div>
 
         <div class="col-md-9">
@@ -90,7 +97,7 @@
             </ul>
         </div>
         <div class="col-md-12 text-center">
-            <a href="/pv/planview-enterprise/" class="btn btn-lg btn-primary" style="margin-top: 1em;">Learn more<span class="sr-only"> about New Business Capability Dimension for Portfolio Management</span></a>
+            <a href="/pv/planview-enterprise/planning-and-execution/" class="btn btn-lg btn-primary" style="margin-top: 1em;">Learn more<span class="sr-only"> about New Business Capability Dimension for Portfolio Management</span></a>
         </div>
     </div>
     <hr />
@@ -99,7 +106,7 @@
             <h2 id="work-portfolio">Work Portfolio: Group By and Summarize Financials in Real-Time</h2> Project and portfolio managers gain real-time visibility and understanding of projects and associated financial plans by being able to group by and summarize across work portfolios. Users can analyze projects grouped by key attributes (any single or multi-select work alternate structure) such as work type, status, gate, market, brand, business capability, etc. Project financials are summarized across the attributes, giving users up-to-date totals for cost, benefit, and effort by each value. For example, understand actual costs by work type, review planned capital expenditures by lifecycle stage, and monitor total costs by cost center, all in real-time.
         </div>
         <div class="col-md-12 text-center">
-            <a href="/pv/planview-enterprise/" class="btn btn-lg btn-primary" style="margin-top: 1em;">Learn more<span class="sr-only"> about Work Portfolio</span></a>
+            <a href="/pv/planview-enterprise/planning-and-execution/" class="btn btn-lg btn-primary" style="margin-top: 1em;">Learn more<span class="sr-only"> about Work Portfolio</span></a>
         </div>
     </div>
     <hr />
@@ -109,7 +116,8 @@
         </div>
 
         <div class="col-md-3 pull-right">
-            <a class="fancybox" title="New Organizational Pivot to Resource Management and Assignments" href="/wp-content/uploads/2015/10/pve-11-5-role-based-planning.png"><img src="/wp-content/uploads/2015/10/pve-11-5-role-based-planning-300x198.png" alt="New Organizational Pivot to Resource Management and Assignments" width="260" class="alignnone size-medium wp-image-771" /></a>
+            <a class="fancybox" title="New Organizational Pivot to Resource Management and Assignments" href="/wp-content/uploads/2015/10/pve-11-5-role-based-planning.png"><img src="/wp-content/uploads/2015/10/pve-11-5-role-based-planning-300x198.png" alt="New Organizational Pivot to Resource Management and Assignments" width="260" class="alignnone size-medium" />
+            </a>
         </div>
 
         <div class="col-md-9">
@@ -123,26 +131,28 @@
             </ul>
         </div>
         <div class="col-md-12 text-center">
-            <a href="/pv/planview-enterprise/" class="btn btn-lg btn-primary" style="margin-top: 1em;">Learn more<span class="sr-only"> about New Organizational Resource Pivot</span></a>
+            <a href="/pv/planview-enterprise/planning-and-execution/" class="btn btn-lg btn-primary" style="margin-top: 1em;">Learn more<span class="sr-only"> about New Organizational Resource Pivot</span></a>
         </div>
     </div>
     <hr />
     <div class="row">
         <div class="col-md-12">
-            <h2 id="customer-driven-enhancements">Manage the Strategy and Business of IT with Integration between Troux and Planview Enterprise</h2> Forging a vital link between enterprise architecture (EA) practices and project management offices (PMOs), Planview Enterprise 11.5 releases its first integration between Troux and delivers a unique solution for connecting strategy and execution to more effectively optimize resources and drive transformation initiatives. By integrating capability and technology management from Troux products with portfolio and resource management in Planview Enterprise, the integration gives IT leaders a consolidated planning and management environment. As a result, enterprise architects and PMOs can work together more effectively to execute business initiatives, make more informed IT portfolio decisions, and ultimately help IT organizations achieve strategic, organizational, and technical goals. There are two key components for this first generation integration:
-            <ol>
-                <li><a href="#conduct-project-assessments">Ability to assess potential projects</a>
-                </li>
-                <li><a href="#realizing-capability-driven-planning">Evaluate, measure and communicate by capability</a>
-                </li>
-            </ol>
-
+            <h2 id="customer-driven-enhancements">Manage the Strategy and Business of IT with Integration between Troux and Planview Enterprise</h2>
+        </div>
+        <div class="col-md-4 pull-right text-center">
+            <a href="https://player.video.limelight.com/twitter/index.html?mediaId=342cec00cda64a02af05ef1715352a7b&amp;width=1763&amp;height=815&amp;playerForm=611bdf072b1d44069633370c114553f2&amp;autoplay=true&amp;startQuality=1200" class="pop-up-video"><img src="/wp-content/uploads/2015/10/t-planview-integrates-planview-enterprise-troux-to-advance-video.jpg" class="img-responsive center-block hidden-xs wp-post-image" alt="Planview Integrates Troux and Planview Enterprise to Advance Portfolio and Resource Management">
+            </a>
+        </div>
+        <div class="col-md-8">
+            Forging a vital link between enterprise architecture (EA) practices and project management offices (PMOs), Planview Enterprise 11.5 releases its first integration between Troux and delivers a unique solution for connecting strategy and execution to more effectively optimize resources and drive transformation initiatives. By integrating capability and technology management from Troux products with portfolio and resource management in Planview Enterprise, the integration gives IT leaders a consolidated planning and management environment. As a result, enterprise architects and PMOs can work together more effectively to execute business initiatives, make more informed IT portfolio decisions, and ultimately help IT organizations achieve strategic, organizational, and technical goals.
+        </div>
+        <div class="col-md-12">
             <h3 id="conduct-project-assessments">Conduct Project Assessments</h3> By integrating demand management and portfolio planning in Planview Enterprise with technical assessments from Troux, organizations make better decisions with a more complete picture of each investment and assess the potential to impact the business. IT organizations can ensure that all new demand is properly analyzed and understood before going through capacity planning and project approval. The integration takes proposed projects from Planview Enterprise and sends them to Troux where enterprise architects can leverage the depth of information available to assess the technology and business risks. Planview Enterprise lifecycles provide governance to determine which projects to assess (be it all or some) and when it is required. Troux metrics such as EA alignment, capability importance, and the number of affected applications flow back to Planview Enterprise to ensure the portfolio assessment has a holistic picture of the investment. Once approved, project status flows back from Planview Enterprise to Troux to communicate progress.
 
             <h3 id="realizing-capability-driven-planning">Realizing Capability Driven Planning</h3> As discussed in “New Business Capability Dimension for Portfolio Management” above, capability-driven planning is vital to ensure resources are allocated to the core competencies of the business. While capabilities can be manually entered and managed in Planview Enterprise, improved accuracy and alignment is provided by integrating with Troux as the system-of-record for both capabilities and the relationship of those capabilities to projects. With the integration, Planview Enterprise receives the most up-to-date capability hierarchy and the proper mapping of capabilities to projects, thereby enabling a better understanding of how financial and human resources are planned against the business capabilities that define your business.
         </div>
         <div class="col-md-12 text-center">
-            <a href="/pv/planview-enterprise/" class="btn btn-lg btn-primary" style="margin-top: 1em;">Learn more<span class="sr-only"> about Troux Integration</span></a>
+            <a href="/pv/planview-enterprise/troux-integration/" class="btn btn-lg btn-primary" style="margin-top: 1em;">Learn more<span class="sr-only"> about Troux Integration</span></a>
         </div>
     </div>
     <hr />
@@ -165,7 +175,7 @@
             <h3>Track your Time in Either Product</h3>Users can report time in either Projectplace or Planview Enterprise. If reported in Projectplace, through the integration, the time will be sent to Planview Enterprise for consolidation, understanding actuals and tracking costs.
         </div>
         <div class="col-md-12 text-center">
-            <a href="/pv/planview-enterprise/" class="btn btn-lg btn-primary" style="margin-top: 1em;">Learn more<span class="sr-only"> about Managing all Work and Resources with Planview Enterprise and Projectplace</span></a>
+            <a href="/pv/planview-enterprise/projectplace-integration/" class="btn btn-lg btn-primary" style="margin-top: 1em;">Learn more<span class="sr-only"> about Managing all Work and Resources with Planview Enterprise and Projectplace</span></a>
         </div>
     </div>
     <hr />
@@ -186,18 +196,7 @@
             </ul>
         </div>
         <div class="col-md-12 text-center">
-            <a href="/pv/planview-enterprise/" class="btn btn-lg btn-primary" style="margin-top: 1em;">Learn more<span class="sr-only"> about Additional Enhancements in Planview Enterprise 11.5</span></a>
+            <a href="/pv/planview-enterprise/additional-enhancements/" class="btn btn-lg btn-primary" style="margin-top: 1em;">Learn more<span class="sr-only"> about Additional Enhancements in Planview Enterprise 11.5</span></a>
         </div>
     </div>
 </div>
-<!--
-<img src="/wp-content/uploads/2015/10/pve-11-5-pp-integration-300x156.png" alt="pve-11-5-pp-integration" width="300" height="156" class="alignnone size-medium wp-image-770" />
-
-<img src="/wp-content/uploads/2015/10/pve-11-5-select-reports-to-include-in-ribbon-300x265.png" alt="pve-11-5-select-reports-to-include-in-ribbon" width="300" height="265" class="alignnone size-medium wp-image-773" />
-
-<img src="/wp-content/uploads/2015/10/pve-11-5-troux-integration-300x145.png" alt="pve-11-5-troux-integration" width="300" height="145" class="alignnone size-medium wp-image-774" />
-
-<img src="/wp-content/uploads/2015/10/pve-11-5-troux-metrics-300x74.png" alt="pve-11-5-troux-metrics" width="300" height="74" class="alignnone size-medium wp-image-775" />
-
-<img src="/wp-content/uploads/2015/10/pve-11-5-troux-metrics-b-300x177.png" alt="pve-11-5-troux-metrics-b" width="300" height="177" class="alignnone size-medium wp-image-776" />
--->

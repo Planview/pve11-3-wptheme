@@ -42,19 +42,19 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <h2>Complement your Planview products with value added services:</h2>
+                <h2>Complement your Planview products with value-added services:</h2>
             </div>
-            <div class="col-md-3">
-                <h3 class="overview-header"><a href="/pv/services/migration/"><img src="/wp-content/uploads/2015/06/icon-migrations.png" alt="Migrations" /><br />Migrations</a></h3>
+            <div class="col-md-4">
+                <h3 class="overview-header"><img src="/wp-content/uploads/2015/06/icon-migrations.png" alt="Migrations" /><br />Migrations</h3>
             </div>
-            <div class="col-md-3">
-                <h3 class="overview-header"><a href="/pv/services/cloudlift/"><img src="/wp-content/uploads/2015/06/icon-cloudlift.png" alt="CloudLift" /><br />CloudLift</a></h3>
+            <div class="col-md-4">
+                <h3 class="overview-header"><img src="/wp-content/uploads/2015/06/icon-cloudlift.png" alt="CloudLift" /><br />CloudLift</h3>
             </div>
-            <div class="col-md-3">
-                <h3 class="overview-header"><a href="/pv/services/managed-services/"><img src="/wp-content/uploads/2015/06/icon-managed-services.png" alt="Managed Services" /><br />Managed Services</a></h3>
+            <div class="col-md-4">
+                <h3 class="overview-header"><img src="/wp-content/uploads/2015/06/icon-managed-services.png" alt="Managed Services" /><br />Managed Services</h3>
             </div>
-            <div class="col-md-3">
-                <h3 class="overview-header"><a href="/pv/services/rpm/"><img src="/wp-content/uploads/2015/10/icon-rpm.png" alt="RPM" /><br />RPM</a></h3>
+            <div class="col-sm-12 text-center">
+                <p><a href="/library/#tab-services" class="btn btn-primary btn-block btn-lg">Find out more</a></p>
             </div>
         </div>
     </div>
@@ -64,7 +64,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <h2>Access demos, presentations, data sheets, solution briefs, and more across all Planview products in the Resource Library.</h2>
+                <h2>Access demos, presentations, solution briefs, and more across all Planview products.</h2>
                 <a href="/library/" class="btn btn-primary btn-block btn-lg">Browse the library</a>
             </div>
         </div>

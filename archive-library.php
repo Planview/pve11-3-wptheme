@@ -33,7 +33,7 @@ get_header(); ?>
                                     echo '</ul></li>';
                                 } else {
                         ?>
-                        <li<?php echo $activeProductSet ? ' class="dropdown"' : ' class="active dropdown"'; $activeProductSet = true; ?>><a id="tabid-<?php echo $release_posts['__object']->slug; ?>" class="dropdown-toggle" href="#" role="tab" data-toggle="dropdown"><?php echo $release_posts['__object']->parent_name; ?> <span class="caret" style="display: inline-block;"></span></a><ul class="dropdown-menu" role="menu">
+                        <li<?php echo $activeProductSet ? ' class="dropdown"' : ' class="active dropdown"'; $activeProductSet = true; ?>><a id="parentid-<?php echo $release_posts['__object']->slug; ?>" class="dropdown-toggle" href="#" role="tab" data-toggle="dropdown"><?php echo $release_posts['__object']->parent_name; ?> <span class="caret" style="display: inline-block;"></span></a><ul class="dropdown-menu" role="menu">
                         <?php
                                 }
                             }

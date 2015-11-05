@@ -56,8 +56,8 @@ function pve_113_library_pre_get_posts( $query ) {
         return;
 
     $query->set('posts_per_page', -1);
-    $query->set('orderby', 'name');
-    $query->set('order', 'ASC');
+    $query->set('orderby', 'date');
+    $query->set('order', 'DESC');
 }
 add_action('pre_get_posts', 'pve_113_library_pre_get_posts');
 
@@ -120,14 +120,13 @@ function pve_113_library_sort() {
         }
     }
 
-//    uasort( $sorted_list, function ($a, $b) {
-//        $a_val = get_field( 'pve_113_library_sort_order', "{$a['__object']->taxonomy}_{$a['__object']->term_id}" );
-//        $b_val = get_field( 'pve_113_library_sort_order', "{$b['__object']->taxonomy}_{$b['__object']->term_id}" );
-//        echo $a_val . ' --- '
-//        return $a_val - $b_val;
-//    } );
+    uasort( $sorted_list, function ($a, $b) {
+        $a_val = get_field( 'pve_113_library_sort_order', "{$a['__object']->taxonomy}_{$a['__object']->term_id}" );
+        $b_val = get_field( 'pve_113_library_sort_order', "{$b['__object']->taxonomy}_{$b['__object']->term_id}" );
+        return $a_val - $b_val;
+    } );
 
-    uasort( $sorted_list, 'compare_multi' );
+//    uasort( $sorted_list, 'compare_multi' );
 
     echo "<pre>";
     print_r($sorted_list);

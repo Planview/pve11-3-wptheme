@@ -96,3 +96,12 @@
 
 /* Projectplace demo button */
 /* See Bootstrap > btn-warning */
+
+/* Customer Success Center library button */
+.btn-customer-success-center{color:#fff;background-color:#ba8aa4;border-color:#9a5b7d;white-space:normal;display:none;}
+.btn-customer-success-center:focus,.btn-customer-success-center.focus{color:#fff;background-color:#9a5b7d;border-color:#692249}
+.btn-customer-success-center:hover{color:#fff;background-color:#9a5b7d;border-color:#692249}
+.btn-customer-success-center:active,.btn-customer-success-center.active,.open>.btn-customer-success-center.dropdown-toggle{color:#fff;background-color:#9a5b7d;border-color:#692249}
+.btn-customer-success-center:active:hover,.btn-customer-success-center:active:focus,.btn-customer-success-center:active.focus,.btn-customer-success-center.active:hover,.btn-customer-success-center.active:focus,.btn-customer-success-center.active.focus,.open>.btn-customer-success-center.dropdown-toggle:hover,.open>.btn-customer-success-center.dropdown-toggle:focus,.open>.btn-customer-success-center.dropdown-toggle.focus{color:#fff;background-color:#692249;border-color:#9a5b7d}
+.btn-customer-success-center:active,.btn-customer-success-center.active,.open>.btn-customer-success-center.dropdown-toggle{background-image:none}
+.btn-customer-success-center.disabled,.btn-customer-success-center.disabled:hover,.btn-customer-success-center.disabled:focus,.btn-customer-success-center.disabled.focus,.btn-customer-success-center.disabled:active,.btn-customer-success-center.disabled.active,.btn-customer-success-center[disabled],.btn-customer-success-center[disabled]:hover,.btn-customer-success-center[disabled]:focus,.btn-customer-success-center[disabled].focus,.btn-customer-success-center[disabled]:active,.btn-customer-success-center[disabled].active,fieldset[disabled] .btn-customer-success-center,fieldset[disabled] .btn-customer-success-center:hover,fieldset[disabled] .btn-customer-success-center:focus,fieldset[disabled] .btn-customer-success-center.focus,fieldset[disabled] .btn-customer-success-center:active,fieldset[disabled] .btn-customer-success-center.active{background-color:#e8d8e1;border-color:#9a5b7d}.btn-customer-success-center .badge{color:#ba8aa4;background-color:#fff}

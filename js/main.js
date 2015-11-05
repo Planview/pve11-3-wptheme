@@ -104,9 +104,9 @@ jQuery(document).ready(function ($) {
 			$( "div#fancybox-title" ).css( "margin-left", "0" );
 			$( "div#fancybox-title" ).css( "margin-right", "0" );
 		});
-	}	
+	}
 	//-- fancybox iframe pop-up (used for limelight videos)
-	if ( jQuery('a.pop-up-video').length ) { //if exists	
+	if ( jQuery('a.pop-up-video').length ) { //if exists
 		jQuery("a.pop-up-video").fancybox({
         	'width'				: getCurrentWindowWidth(), //$(window).width(), 800 = actual limelight player width
 			'height'			: getCurrentWindowHeight(), //$(window).height(), 450 = actual limelight player height
@@ -120,7 +120,7 @@ jQuery(document).ready(function ($) {
         	'openEffect'		: 'elastic',
 			'closeEffect'		: 'elastic',
 			'type'				: 'iframe',
-			'onStart' 			: function() {                    
+			'onStart' 			: function() {
             						this.width = getCurrentWindowWidth();
 									this.height = getCurrentWindowHeight();
         						}
@@ -205,7 +205,7 @@ jQuery(document).ready(function ($) {
 			'autoScale'     	: true,
     	    'transitionIn'		: 'none',
 			'transitionOut'		: 'none'
-		});	
+		});
 		// style the swf pop-up
 		$("body").on('click', 'a.pop-up-swf', function() {
 			$( "div#fancybox-title" ).css( "margin-left", "0" );
@@ -222,5 +222,8 @@ jQuery(document).ready(function ($) {
 	if (hashURL.substring(0,5) == '#tab-') {
 		$('nav.resources-tabs a[href="#' + hashURL.substring(5) + '"]').trigger('click');
 	}
+
+    // Add a menu separator after the services menu list item
+    $('<li role="separator" class="divider"></li>').insertAfter($('#tabid-services').closest('li'));
 
 });

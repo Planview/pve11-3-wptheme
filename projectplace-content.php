@@ -2,7 +2,8 @@
     <div class="row">
 
         <div class="col-md-4 pull-right">
-            <a class="pop-up-iframe" title="New Release of Planview Enterprise 11.5" href="//www.youtube.com/embed/F2PACxoqtIM?rel=0"><img src="/wp-content/uploads/2015/06/planview-enterprise-video-whats-new-3502.png" alt="New Release of Planview Enterprise 11.5" width="350" height="197" /></a>
+            <a class="pop-up-iframe" title="New Release of Planview Enterprise 11.5" href="//www.youtube.com/embed/F2PACxoqtIM?rel=0"><img src="/wp-content/uploads/2015/06/planview-enterprise-video-whats-new-3502.png" alt="New Release of Planview Enterprise 11.5" width="350" height="197" />
+            </a>
         </div>
 
         <div class="col-md-8">
@@ -23,7 +24,8 @@
         </div>
 
         <div class="col-md-3 pull-right">
-            <a class="fancybox" title="Time Estimation on Cards" href="/wp-content/uploads/2015/06/projectplace-ss1.png" style="margin-top: 2em;"><img src="/wp-content/uploads/2015/06/projectplace-ss1-300x153.png" alt="Time Estimation on Cards" width="260" class="alignnone size-medium wp-image-829" /></a>
+            <a class="fancybox" title="Time Estimation on Cards" href="/wp-content/uploads/2015/06/projectplace-ss1.png" style="margin-top: 2em;"><img src="/wp-content/uploads/2015/06/projectplace-ss1-300x153.png" alt="Time Estimation on Cards" width="260" class="alignnone size-medium" />
+            </a>
         </div>
         <div class="col-md-12 text-center">
             <a href="/pv/projectplace/" class="btn btn-lg btn-warning" style="margin-top: 1em;">Learn more<span class="sr-only"> about Time Estimation on Cards</span></a>
@@ -32,13 +34,12 @@
     <hr />
     <div class="row">
         <div class="col-md-12">
-            <h2 id="workload-management">Workload Management</h2>Workload Management in Projectplace enables selected users to gain visibility of commitments across all projects: who is working on what, the resource workload at any given point of time, and who might be available for additional work.
-
-            The Workload view provides information about all overdue, ongoing, and planned cards and activities with cards associated to them, for each project member within your account.
+            <h2 id="workload-management">Workload Management</h2>Workload Management in Projectplace enables selected users to gain visibility of commitments across all projects: who is working on what, the resource workload at any given point of time, and who might be available for additional work. The Workload view provides information about all overdue, ongoing, and planned cards and activities with cards associated to them, for each project member within your account.
         </div>
 
         <div class="col-md-3 pull-right">
-            <a class="fancybox" title="Workload Trend" href="/wp-content/uploads/2015/06/projectplace-ss4.png"><img src="/wp-content/uploads/2015/06/projectplace-ss4-300x240.png" alt="Workload Trend" width="260" class="alignnone size-medium wp-image-831" /></a>
+            <a class="fancybox" title="Workload Trend" href="/wp-content/uploads/2015/06/projectplace-ss4.png"><img src="/wp-content/uploads/2015/06/projectplace-ss4-300x240.png" alt="Workload Trend" width="260" class="alignnone size-medium" />
+            </a>
         </div>
 
         <div class="col-md-9">
@@ -59,7 +60,8 @@
         </div>
 
         <div class="col-md-3 pull-right">
-            <a class="fancybox" title="Two-Step Verification" href="/wp-content/uploads/2015/06/projectplace-ss6.png"><img src="/wp-content/uploads/2015/06/projectplace-ss6-cropped-300x251.png" alt="Two-Step Verification" width="260" class="alignnone size-medium wp-image-828" /></a>
+            <a class="fancybox" title="Two-Step Verification" href="/wp-content/uploads/2015/06/projectplace-ss6.png"><img src="/wp-content/uploads/2015/06/projectplace-ss6-cropped-300x251.png" alt="Two-Step Verification" width="260" class="alignnone size-medium" />
+            </a>
         </div>
 
         <div class="col-md-9">
@@ -81,7 +83,8 @@
     <hr />
     <div class="row">
         <div class="col-md-3 pull-right">
-            <a class="fancybox" title="Project Portfolios" href="/wp-content/uploads/2015/06/projectplace-ss2.png" style="margin-top: 2em;"><img src="/wp-content/uploads/2015/06/projectplace-ss2-300x298.png" alt="Project Portfolios" width="260" class="alignnone size-medium wp-image-830" /></a>
+            <a class="fancybox" title="Project Portfolios" href="/wp-content/uploads/2015/06/projectplace-ss2.png" style="margin-top: 2em;"><img src="/wp-content/uploads/2015/06/projectplace-ss2-300x298.png" alt="Project Portfolios" width="260" class="alignnone size-medium" />
+            </a>
         </div>
 
         <div class="col-md-9">

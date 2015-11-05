@@ -263,15 +263,24 @@ body.home.not-logged-in {
             font-weight: 400;
             padding-bottom: 50px;
         }
-        p {
-            font-size: 30px;
-            font-weight: normal;
-        }
         a {
             font-size: 24px;
             font-weight: normal;
             color: #fff;
-            border-bottom: 1px solid #fff;
+            &.btn {
+                color: #fff;
+                max-width: 360px;
+                font-size: 36px;
+                margin: 50px auto 0;
+            }
+            &.underline {
+                border-bottom: 1px solid #fff;
+            }
+        }
+        p {
+            font-size: 30px;
+            font-weight: normal;
+            text-align: center;
         }
     }
     &.products {
@@ -348,12 +357,27 @@ body.home.not-logged-in {
             bottom: 100px;
         }
         h3 {
+            text-decoration: none;
+            font-weight: normal;
+            margin-bottom: 35px;
+            border-bottom: none;
             a {
                 color: #666;
             }
             img {
                 padding-top: 40px;
             }
+        }
+        a {
+            &.btn {
+                color: #fff;
+                max-width: 360px;
+                font-size: 36px;
+                margin: 50px auto 0;
+            }
+        }
+        p {
+            text-align: center;
         }
     }
     &.resources {

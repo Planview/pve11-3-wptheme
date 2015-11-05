@@ -6,7 +6,7 @@
         color: $white;
         background-color: $gray;
         font-size: 20px;
-        padding: 5px;
+        padding: 5px 15px;
     }
     li a:selected {
         color: $brand-default;
@@ -15,37 +15,37 @@
         background-color: $brand-default;
         color: $white;
     }
-    #tabid-pve-11-5,
-    #tabid-troux,
-    #tabid-projectplace,
-    #tabid-services {
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
     @media (min-width: 768px) {
         .nav-justified>li {
             vertical-align: middle;
         }
     }
     @media only screen and (max-width: 1199px) {
-        #tabid-pve-11-5 {
-            padding-top: 5px;
-            padding-bottom: 5px;
+        & >.container>ul>li>#parentid-pve-11-5,
+        & >.container>ul>li>#parentid-pve-11-4,
+        & >.container>ul>li>#parentid-services,
+        & >.container>ul>li>#tabid-troux,
+        & >.container>ul>li>#tabid-projectplace {
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
     }
     @media only screen and (max-width: 991px) {
-        #tabid-troux,
-        #tabid-projectplace,
-        #tabid-services {
-            padding-top: 18px;
-            padding-bottom: 17px;
+        & >.container>ul>li>#parentid-pve-11-5,
+        & >.container>ul>li>#parentid-pve-11-4,
+        & >.container>ul>li>#parentid-services,
+        & >.container>ul>li>#tabid-troux,
+        & >.container>ul>li>#tabid-projectplace {
+            padding-top: 17px;
+            padding-bottom: 18px;
         }
     }
     @media only screen and (max-width: 767px) {
-        #tabid-pve-11-5,
-        #tabid-troux,
-        #tabid-projectplace,
-        #tabid-services {
+        & >.container>ul>li>#parentid-pve-11-5,
+        & >.container>ul>li>#parentid-pve-11-4,
+        & >.container>ul>li>#parentid-services,
+        & >.container>ul>li>#tabid-troux,
+        & >.container>ul>li>#tabid-projectplace {
             padding-top: 5px;
             padding-bottom: 5px;
         }
@@ -92,16 +92,39 @@
 /* Projectplace demo button */
 /* See Bootstrap > btn-warning */
 
+/* Customer Success Center library button */
+.btn-customer-success-center{color:#fff;background-color:#ba8aa4;border-color:#9a5b7d;white-space:normal;display:none;}
+.btn-customer-success-center:focus,.btn-customer-success-center.focus{color:#fff;background-color:#9a5b7d;border-color:#692249}
+.btn-customer-success-center:hover{color:#fff;background-color:#9a5b7d;border-color:#692249}
+.btn-customer-success-center:active,.btn-customer-success-center.active,.open>.btn-customer-success-center.dropdown-toggle{color:#fff;background-color:#9a5b7d;border-color:#692249}
+.btn-customer-success-center:active:hover,.btn-customer-success-center:active:focus,.btn-customer-success-center:active.focus,.btn-customer-success-center.active:hover,.btn-customer-success-center.active:focus,.btn-customer-success-center.active.focus,.open>.btn-customer-success-center.dropdown-toggle:hover,.open>.btn-customer-success-center.dropdown-toggle:focus,.open>.btn-customer-success-center.dropdown-toggle.focus{color:#fff;background-color:#692249;border-color:#9a5b7d}
+.btn-customer-success-center:active,.btn-customer-success-center.active,.open>.btn-customer-success-center.dropdown-toggle{background-image:none}
+.btn-customer-success-center.disabled,.btn-customer-success-center.disabled:hover,.btn-customer-success-center.disabled:focus,.btn-customer-success-center.disabled.focus,.btn-customer-success-center.disabled:active,.btn-customer-success-center.disabled.active,.btn-customer-success-center[disabled],.btn-customer-success-center[disabled]:hover,.btn-customer-success-center[disabled]:focus,.btn-customer-success-center[disabled].focus,.btn-customer-success-center[disabled]:active,.btn-customer-success-center[disabled].active,fieldset[disabled] .btn-customer-success-center,fieldset[disabled] .btn-customer-success-center:hover,fieldset[disabled] .btn-customer-success-center:focus,fieldset[disabled] .btn-customer-success-center.focus,fieldset[disabled] .btn-customer-success-center:active,fieldset[disabled] .btn-customer-success-center.active{background-color:#e8d8e1;border-color:#9a5b7d}.btn-customer-success-center .badge{color:#ba8aa4;background-color:#fff}
+
 .demo-callout {display: none}
+.more-resources {display: none;}
 .product-planview-enterprise {
     .btn-troux, .btn-projectplace {display: none}
     .demo-callout {display: block}
+    .more-planview {display: block}
 }
 .product-troux {
     .btn-planview, .btn-projectplace {display: none}
     .demo-callout {display: block}
+    .more-troux {display: block}
 }
 .product-projectplace {
     .btn-planview, .btn-troux {display: none}
     .demo-callout {display: block}
+    .more-projectplace {display: block}
+}
+// Products Showcase
+.postid-549 {
+    .demo-callout {display: block}
+}
+.product-services {
+    .btn-planview, .btn-troux, .btn-projectplace {display: none}
+    .btn-customer-success-center {display: block}
+    .demo-callout {display: block}
+    .more-customer-success-center {display: block}
 }

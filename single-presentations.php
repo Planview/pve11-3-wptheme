@@ -77,7 +77,7 @@ get_header(); ?>
                 </div>
                 <div class="col-sm-3">
                     <aside class="demo-callout">
-                        <a href="/library/#tab-pve-11-4" class="btn btn-primary btn-block btn-lg" target="_blank">
+                        <a href="/library/#tab-pve-11-5" class="btn btn-primary btn-block btn-lg" target="_blank">
                             Planview Enterprise Demo
                         </a>
                         <a href="/library/#tab-troux" class="btn btn-troux btn-block btn-lg" target="_blank">
@@ -86,6 +86,9 @@ get_header(); ?>
                         <a href="/library/#tab-projectplace" class="btn btn-warning btn-block btn-lg" target="_blank">
                             Projectplace Demo
                         </a>
+                        <a href="http://success.planview.com" class="btn btn-warning btn-customer-success-center btn-block btn-lg" target="_blank">
+                            Access the New Customer Success Center
+                        </a>
                     </aside>
                     <aside class="resource-list">
                         <h3 class="section-title">Resources</h3>
@@ -93,7 +96,20 @@ get_header(); ?>
                     </aside>
                     <aside class="survey-callout">
                         <h3 class="section-title">Survey</h3>
-                        <a href="http://www.surveygizmo.com/s3/2359859/2015-Planview-Products-Central" class="btn btn-default btn-block btn-lg" target="_blank">
+                        <?php pve_113_resource_list( get_field( 'pv_event_presentation_resources' ) ); ?>
+                        <a href="/library/#tab-planview" class="more-resources more-planview">
+                            More resources
+                        </a>
+                        <a href="/library/#tab-troux" class="more-resources more-troux">
+                            More resources
+                        </a>
+                        <a href="/library/#tab-projectplace" class="more-resources more-projectplace">
+                            More resources
+                        </a>
+                        <a href="/library/#tab-customer-success-center" class="more-resources more-customer-success-center">
+                            More resources
+                        </a>
+                        <br><a href="http://www.surveygizmo.com/s3/2359859/2015-Planview-Products-Central" class="btn btn-default btn-block btn-lg" target="_blank">
                             Take the Survey
                         </a>
                     </aside>
